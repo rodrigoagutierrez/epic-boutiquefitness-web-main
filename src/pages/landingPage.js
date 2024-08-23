@@ -55,6 +55,17 @@ export default function LandingPage() {
 			<PatternTurquoise />
 			<PatternWhapp />
 			<LandingHeader />
+			{/* Contact section */}
+			<div id="contact">
+				<div className="contactTitle">
+					<h1 className="boxxy">
+						<Trans>Contact</Trans>
+					</h1>
+				</div>
+
+				<ContactForm />
+			</div>
+			<ContactDetails />
 			<div className="landing">
 				<Video
 					src={LandingVideo}
@@ -102,12 +113,7 @@ export default function LandingPage() {
 			{/* Workout section */}
 
 			<WorkoutSelector />
-			{separator}
-
-			{/* First timers section */}
-			<div className="section invert">
-				<FirstTimer />
-			</div>
+		
 			{separator}
 			{/* About section */}
 			<div id="about">
@@ -151,24 +157,6 @@ export default function LandingPage() {
 				</Link>
 
 			</div>
-
-			{/* Contact section */}
-			<div id="contact">
-				<div className="contactTitle">
-					<h1 className="boxxy">
-						<Trans>Contact</Trans>
-					</h1>
-					<span>
-						<Trans>
-							got any questions? <br></br>
-							give us a call or fill the form below
-						</Trans>
-					</span>
-				</div>
-
-				<ContactForm />
-			</div>
-			<ContactDetails />
 
 		</LandingLayout>
 	);
