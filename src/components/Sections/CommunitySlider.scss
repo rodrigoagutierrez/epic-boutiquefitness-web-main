@@ -1,0 +1,123 @@
+
+@use "../../styles/variables" as var;
+@use "../../styles/functions";
+
+$sliderPadding: 1rem;
+
+#communitySlider {
+    // prevent selection on mouse clic
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+    -khtml-user-select: none; /* Konqueror HTML */
+    -moz-user-select: none; /* Old versions of Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+    user-select: none; /* Non-prefixed version, currently supported by Chrome, Edge, Opera and Firefox */
+    
+    .reviewSlide {
+        padding: $sliderPadding;
+        box-sizing: border-box;
+
+        > div {
+            display: flex;
+            flex-wrap: nowrap;
+            flex-direction: column;
+            position: relative;
+            gap: $sliderPadding;
+
+            @include functions.responsive(desktop) {
+                flex-direction: row;
+            }
+            
+            .reviewImg {
+                max-width: 30%;
+                object-fit: contain;
+                border-radius: 999px;
+                align-self: center;
+
+                @include functions.responsive(desktop) {
+                    max-width: 15%;
+                    border-radius: 0;
+                }
+
+                > img {
+                    height: auto;
+                }
+            }
+
+            .reviewText {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+
+                @include functions.responsive(desktop) {
+                    width: 85%;
+                }
+
+                p {
+                    margin-block-start: 0;
+                }
+                
+                .reviewAuthor {
+                    font-size: 1.5rem;
+                    text-align: right;
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+
+    > .hashtags {
+        width: 100%;
+        display: flex;
+        justify-content: space-evenly;
+        padding: 3rem 2rem 0 2rem;
+        box-sizing: border-box;
+
+        @include functions.responsive(desktop) {
+            padding-top: 0.85rem;
+            justify-content: space-between;
+        }
+
+        span {
+            display: block;
+        }
+    }
+
+        
+    // slick-slider overrides 
+
+    .slick-slider {
+
+        .slick-slide {
+            width: 90vw;
+            max-width: 1300px;
+            padding: 0 0.6rem;
+            box-sizing: border-box;
+        }
+
+        .slick-track {
+            display: flex;
+            align-items: center;
+        }
+
+        .slick-dots {
+            bottom: -3rem;
+
+            li  {
+                button {
+                    border-radius: 9999px;
+                    border: 2px solid var.$black;
+                }
+
+                &.slick-active button {
+                    background: var.$black;
+
+                    &:before {
+                        opacity: 0;
+                    }
+                }
+            }
+
+        }
+    }    
+}

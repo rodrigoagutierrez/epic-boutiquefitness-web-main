@@ -1,0 +1,61 @@
+@use "../../styles/variables" as var;
+@use "/src/styles/functions";
+
+
+.bookNowButton {
+    position: fixed;
+    bottom: 1rem;
+    right: 25px;
+    width: auto;
+    z-index: 102;
+    text-align: right;
+    overflow: hidden;
+    background-color: var.$black;
+    padding: 2px;
+
+    @include functions.responsive(desktop) {
+        top: 8px;
+        right: 90px;
+
+        bottom: revert;
+    }
+
+    a {
+        position: relative;
+        display: block;
+        margin: 0;
+        padding: 0.5rem 0.5rem 0.25rem 0.5rem;
+        box-sizing: border-box;
+        width: 100%;
+        color: var.$white;
+        
+        &:hover {
+            color: var.$black;
+            // -webkit-text-fill-color: var.$black;
+            // -webkit-text-stroke-width: 1px;
+            // -webkit-text-stroke-color: var.$white;
+        }
+    
+        &:active {
+            color: var.$white;
+        }
+
+        > h2 {
+            width: auto;
+            margin: 0 0;
+            font-size: 1.5rem;
+            text-align: right;
+        }
+    }
+}
+
+.cornerArrow {
+    display: block;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+
+    width: 60%;
+    max-width: 20rem;
+    z-index: 98;
+}

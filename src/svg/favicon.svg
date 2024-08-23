@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 24.0.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="favicon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 283.5 283.5" style="enable-background:new 0 0 283.5 283.5;" xml:space="preserve">
+<style>
+    #favicon polygon {
+      fill: #000;
+    }
+    @media (prefers-color-scheme: dark) {
+      #favicon polygon {
+        fill: #FFF;
+      }
+    }
+</style>
+<title>Icon</title>
+<polygon points="12.5,120.1 12.4,120.1 12.3,120.2 0.1,141.6 0,141.7 0.1,141.8 12.3,163.3 12.4,163.4 12.5,163.4 269.2,163.4 
+	269.5,163.4 269.5,163.1 269.5,120.3 269.5,120.1 269.2,120.1 "/>
+<polygon points="269.2,28.6 219.6,28.6 65.5,28.6 65.3,28.6 65.3,28.7 27.8,93.6 77.8,93.6 90.3,71.9 269.2,71.9 269.5,71.9 
+	269.5,71.6 269.5,28.8 269.5,28.6 "/>
+<polygon points="269.2,211.6 90.3,211.6 77.8,189.8 27.8,189.8 65.3,254.8 65.3,254.9 65.5,254.9 269.2,254.9 269.5,254.9 
+	269.5,254.7 269.5,211.8 269.5,211.6 "/>
+</svg>

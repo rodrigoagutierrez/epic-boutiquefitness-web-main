@@ -1,0 +1,122 @@
+@use "../../styles/variables" as var;
+@use "/src/styles/functions";
+
+footer {
+    text-align: center;
+    background-color: var.$black;
+    color: var.$white;
+
+    .blackArrow {
+        background-color: transparent;
+        transform: translateY(-100%);
+        
+        svg * {
+            fill: var.$black;
+        }
+    }
+
+    & > .footerMenu {
+        text-align: center;
+        padding-top: 0;
+        padding-bottom: 2rem;
+        margin: 0 auto;
+        margin-top: 2rem;
+    
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        gap: 0 2rem;
+
+        .footerSection {
+            margin-bottom: 4rem;
+
+            h2 {
+                margin: 0;
+            }
+        }
+
+        @include functions.responsive(desktop) {
+            flex-direction: row;
+            text-align: left;
+            justify-content: space-between;
+            align-items: stretch;
+            gap: 0 2rem;
+            max-width: 1300px;
+            margin-top: 0;
+
+            h2 {
+                margin-top: 0;
+                margin-bottom: 0.8rem;
+            }
+
+            h3 {
+                margin: 0.6rem 0;
+            }
+        }
+
+        a:hover {
+            color: var.$turquoise;
+        }
+
+        .CTA {
+            text-align: center;
+            margin: 0;
+            margin-bottom: 2rem;
+            padding: 1rem;
+            border: 2px solid var.$white;
+        }
+
+        .footerSection *:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    .footerBottom {
+        display: flex;
+        flex-direction: column;
+
+        .languages {
+            margin: 1rem 0;
+            flex-grow: 5;
+        }
+        
+        & > div {
+            display: block;
+
+            @include functions.responsive(desktop) {
+                display: inline-block;
+            }
+            
+            a:hover {
+                text-decoration: underline;
+            }
+    
+            & .peimLink {
+                display: inline-block;
+                margin-bottom: 5rem;
+
+                @include functions.responsive(desktop) {
+                    margin-bottom: 0;
+                }
+                
+                &:hover {
+                    color: var.$white;
+                    text-decoration: none;
+                }
+            }
+    
+            &.RRSSLogos {
+                margin-bottom: 1rem;
+
+                svg {
+                    path {
+                        fill: var.$white;
+                    }
+                }
+            }
+        }
+
+    }
+}

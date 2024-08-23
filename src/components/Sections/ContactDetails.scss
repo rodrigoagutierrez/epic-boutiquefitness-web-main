@@ -1,0 +1,49 @@
+@use "../../styles/variables" as var;
+@use "../../styles/functions";
+
+.gmap {
+	margin-top: 2rem;
+	filter: invert(1) grayscale(1) contrast(0.98) brightness(1.2)
+}
+
+.map {
+	width: 
+	100%;
+	max-width: none;
+	min-height: 300px;
+	max-height: 400px;
+	object-position: 70% 45%;
+}
+
+#contactDetails {
+	max-width: revert;
+
+	.contactDetails {
+		margin-top: 1rem;
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		justify-content: center;
+		gap: 1rem 4rem;
+
+		@include functions.responsive(mobile) {
+			flex-direction: column;
+			justify-content: flex-start;
+		}
+	
+		span {
+			display: inline-block;
+			margin-bottom: 0.5rem;
+
+			@include functions.responsive(mobile) {
+				display: block;
+			}
+			
+
+			&.small {
+				font-size: 0.75em;
+				margin-right: 1rem;
+			}
+		}
+	}
+}

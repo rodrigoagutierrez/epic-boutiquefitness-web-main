@@ -1,0 +1,159 @@
+@use "../../styles/functions";
+@use "../../styles/variables" as var;
+
+.contactForm {
+	font-size: 1rem;
+	position: relative;
+	overflow: hidden;
+	margin-bottom: 1rem;
+
+	input,
+	textarea {
+		box-shadow: none;
+		border: 1px solid var.$white;
+		background-color: var.$black;
+		padding: 0.6rem 0.3rem 0.3rem;
+		box-sizing: content-box;
+
+	
+		margin-bottom: 0.5rem;
+	
+		font-size: inherit;
+		text-transform: none;
+		font-family: inherit;
+		font-weight: inherit;
+		color: var.$white;
+
+		box-sizing: border-box;
+		width: 100%;
+	}
+
+	.checkbox {
+		text-align: left;
+
+		input {
+			width: 16px;
+			height: 16px;
+			margin: 0 5px 0 0;
+			border-radius: 0;
+			accent-color: var.$white;
+			
+			// -webkit-appearance: none;
+			// -moz-appearance: none;
+			// appearance: none;
+
+			&:checked{
+				accent-color: var.$black;
+			}
+		}
+	
+		label {
+			display: inline-block;
+			font-weight: 400;
+
+			a {
+				text-decoration: underline;
+			}
+		}
+
+	}
+
+
+	&.showInvalid input:invalid {
+		border: 1px solid var.$magenta;
+	}
+
+	input:-webkit-autofill,
+	input:-webkit-autofill:hover,
+	input:-webkit-autofill:focus,
+	input:-webkit-autofill:active {
+		box-shadow: 0 0 0 30px var.$black inset !important;
+    	-webkit-box-shadow: 0 0 0 30px var.$black inset !important;
+		-webkit-text-fill-color: var.$white !important;
+	}
+
+	input:focus,
+	textarea:focus {
+		box-shadow: none;
+		outline: none;
+		background-color: var.$white;
+		color: var.$black;
+	}
+	
+	input::placeholder,
+	textarea::placeholder,
+	button {
+		font-family: "Gobold", 'Trebuchet MS', Arial, sans-serif;
+		font-weight: 500;
+		text-transform: uppercase;
+		-webkit-text-fill-color:  var.$white;
+		width: 100%;
+	}
+	
+	textarea {
+		display: block;
+		height: 10rem;
+		width: 100%;
+	}
+	
+	.formSubmit {
+		position: relative;
+		text-align: center;
+		margin-left: -2px;
+		width: calc(100% + 4px);
+	}
+	
+	.formSubmit button {
+		padding: 0.3rem 0.3rem 0.25rem;
+		width: 100%;
+		color: var.$white;
+		border-radius: 0;
+		font-size: inherit;
+
+		transition: width var.$medium ease-out, margin-left var.$medium ease-out;
+	}
+
+	.formSubmit button:hover {
+		width: 104%;
+		margin-left: -2%;
+		-webkit-text-fill-color: var.$black;
+	}
+
+	.formSubmit button:active {
+		color: var.$black;
+		-webkit-text-fill-color:  var.$black;
+	}
+
+	&:invalid .formSubmit button {
+		opacity: 0.85;
+	}
+}
+
+
+.formPopUp {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: var.$black;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: nowrap;
+    flex-direction: column;
+
+	text-align: center;
+	padding: 1rem 6rem;
+
+	box-sizing: border-box;
+
+	span {
+		display: contents;
+	}
+}
+
+.formError {
+	padding: 1rem 2rem;
+}

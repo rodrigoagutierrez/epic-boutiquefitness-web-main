@@ -1,0 +1,22 @@
+#faq {
+    margin-top: 10rem;
+    max-width: 800px;
+
+    div {
+        span {
+            display: block;
+        }
+
+        .question {
+            margin-bottom: 0.5rem;
+        }
+
+        .answer {
+            margin-bottom: 2rem;
+        }
+
+        a {
+            text-decoration: underline;
+        }
+    }
+}

@@ -1,0 +1,111 @@
+@use "../../styles/variables" as var;
+@use "../../styles/functions";
+
+#workoutSelector {
+    position: relative;
+
+    .workoutList {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-content: center;
+        align-items: center;
+
+        @include functions.responsive(mobile) {
+            flex-direction: column;
+
+            > button {
+                min-width: 0;
+            }
+        }
+
+        > button {
+            position: relative;
+
+            display: flex;
+            align-items: center;
+            color: var.$white;
+
+            font-size: 2.5rem;
+
+            > div {
+                display: block;
+                min-width: 6rem;
+                text-align: right;
+                background: var.$black;
+            }
+
+            &:hover > div {
+                -webkit-text-stroke-color: var.$turquoise;
+            }
+
+            &:last-child > div {
+                width: 10.2rem;
+                text-align: center;
+                font-size: 2.5rem;
+                line-height: 2.6rem;
+            }
+
+            &.active {
+                -webkit-text-fill-color: var.$white;
+                -webkit-text-stroke: 0;
+
+                &:hover div {
+                    -webkit-text-fill-color: var.$white;
+                }
+
+                svg {
+                    display: inline-block;
+                    max-width: 6rem;
+                    transform: translateX(0) !important;
+
+                    transition: max-width var.$slow ease-out, transform var.$fast var.$medium ease-out;
+                }
+            }
+
+            svg {
+                display: inline-block;
+                height: 3rem;
+                max-width: 0px;
+                transform: translateX(-4rem);
+
+                z-index: -1;
+
+                transition: max-width var.$slow ease-out, transform var.$fast 0s ease-out;
+
+                * {
+                    fill: var.$white;
+                }
+            }
+
+
+            @include functions.responsive(mobile) {
+                &:nth-child(even) {
+                    flex-direction: row-reverse;
+
+                    div {
+                        text-align: left;
+                        min-width: 0;
+                    }
+
+                    svg {
+                        transform: translateX(4rem);
+                    }
+                }
+
+                &:last-child {
+                    width: 100%;
+
+                    > div {
+                        width: 100%;
+                        text-align: center;
+                        font-size: inherit;
+                        line-height: inherit;
+                    }
+                }
+                
+            }
+        }
+    }
+}

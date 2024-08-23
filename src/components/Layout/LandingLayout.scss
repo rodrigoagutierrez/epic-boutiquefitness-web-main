@@ -1,0 +1,73 @@
+@use "../../styles/variables" as var;
+@use "/src/styles/functions";
+
+.topArrow {
+    transform: rotate(180deg);
+    position: fixed;
+    top: 0;
+    height: 90px;
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    overflow: hidden;
+
+    z-index: 99;
+
+    > div {
+        width: 100%;
+        height: auto;
+        background-color: var.$black;
+        flex-grow: 2;
+    }
+
+    svg {
+        max-height: 100%;
+        margin-top: 1px;
+        flex-shrink: 0;
+        flex-grow: 0;
+        stroke: black;
+        stroke-width: 1px;
+    }
+}
+
+.navLogo {
+    position: fixed;
+    top: 15px;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    width: 150px;
+
+    z-index: 100;
+
+    @include functions.responsive(desktop) {
+        width: 170px;
+    }
+
+    * {
+        fill: var.$white;
+    }
+}
+
+
+.RRSSLogos {
+    display: inline-block;
+
+    a {
+        padding: 0 0.25rem;
+        display: inline-block;
+    }
+
+    a, svg {
+        height: 1rem;
+    }
+
+    path {
+        fill: var.$white;
+    }
+}

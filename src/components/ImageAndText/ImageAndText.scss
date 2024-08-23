@@ -1,0 +1,28 @@
+.imageAndTextComponent {
+    position: relative;
+
+    .imageTextContainer {
+        position: relative;
+    
+        .imageBg {
+            z-index: 0;
+        }
+
+        .imageOverlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+    
+            z-index: 2;
+    
+            pointer-events: none;
+        }
+    }
+    
+    
+    .imageTextText {
+        position: absolute;
+        font-size: 6rem;
+        z-index: 1;
+    } 
+}

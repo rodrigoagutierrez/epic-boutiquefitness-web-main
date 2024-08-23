@@ -1,0 +1,75 @@
+@use "../../styles/variables" as var;
+
+.bodytext {
+    margin-top: 10rem;
+    max-width: 800px;
+
+    a {
+        text-decoration: underline;
+    }
+
+    p {
+        margin-bottom: 3rem;
+    }
+
+    br {
+        content: "";
+        display: block; 
+        margin-top: 0.5rem;
+        line-height: 1.5rem;
+    }
+
+    button {
+        font-size: 1rem;
+        color: var.$white;
+
+        &:hover {
+            text-decoration: underline;
+        }
+
+        &.unactive {
+            opacity: 0.5;
+            pointer-events: none;
+        }
+    }
+
+    table {
+        position: relative;
+        table-layout: fixed;
+        width: 100%;
+        border-collapse: collapse;
+
+        border: 1px solid var.$white;
+
+        tr th:nth-child(1) {
+            width: 10%;
+        }
+
+        tr th:nth-child(2) {
+            width: 20%;
+        }
+
+        tr th:nth-child(3) {
+            width: 10%;
+        }
+
+        tr th:nth-child(4) {
+            width: 30%;
+        }
+
+        tr th:nth-child(5) {
+            width: 20%;
+        }
+
+        tr th:nth-child(6) {
+            width: 10%;
+        }
+
+
+        tr td, tr th {
+            word-wrap: break-word;
+            padding: 5px;
+            border: 1px solid var.$turquoise;
+        }
+    }
+}

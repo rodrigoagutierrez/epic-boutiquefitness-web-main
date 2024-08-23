@@ -1,0 +1,77 @@
+@use "../../styles/functions";
+@use "../../styles/variables" as var;
+
+
+.iconSurround {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+
+    .iconSurroundText {
+        height: 10rem;
+        width: 10rem;
+    
+        text, tspan {
+            fill: var.$white;
+            color: var.$white;
+            font-size: 2.6rem;
+            margin-right: 2rem;
+            text-align: justify;
+            text-justify: inter-word;
+            width: 100%;
+        }
+
+        // Disable scroll-animation on mobile
+
+        @include functions.responsive(mobile) {
+            will-change: unset;
+            transform: none !important;
+        }
+    
+        #circle {
+            height: 100%;
+            animation: spin 15s linear infinite;
+        }
+    }
+    
+    .iconSurrondIcon {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+    
+    svg#heart path {
+        fill: url(#patternTurquoiseRef);
+    }
+    
+    svg#leaf path {
+        fill: url(#patternTurquoiseRef);
+    }
+}
+
+
+@keyframes spin {
+    0% {
+        transform: rotate3D(0, 0, 1, 0deg);
+    }
+
+    25% {
+        transform:  rotate3D(0, 0, 1, 90deg);
+    }
+
+    50% {
+        transform:  rotate3D(0, 0, 1, 180deg);
+    }
+
+    75% {
+        transform:  rotate3D(0, 0, 1, 270deg);
+    }
+
+    100% {
+        transform:  rotate3D(0, 0, 1, 360deg);
+    }
+}

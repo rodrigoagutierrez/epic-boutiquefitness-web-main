@@ -1,0 +1,29 @@
+ @mixin responsive ($device) {
+  
+    @if $device == desktop {    
+        @media only screen and (min-width: 960px) {
+            @content;
+        }
+    }
+    
+    @if $device == mobile {
+        @media only screen and (max-width: 960px) {
+        @content;
+        }
+    }
+}
+
+@mixin orientation ($direction) {
+
+    @if $direction == portrait {
+        @media only screen and (orientation: portrait) {
+            @content;
+        }
+    }
+
+    @if $direction == landscape {  
+        @media only screen and (orientation: landscape) {
+            @content;
+        }
+    }
+}

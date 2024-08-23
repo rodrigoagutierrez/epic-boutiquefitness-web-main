@@ -1,0 +1,46 @@
+@use "../../styles/variables" as var;
+@use "../../styles/functions";
+
+.loader {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 200px;
+  height: 20px;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  z-index: 3;
+  overflow: hidden;
+
+  > div {
+    top: 0;
+    opacity: 1;
+    left: -50%;
+    display: block;
+    width: 200%;
+    height: 100%;
+    position: absolute;
+    overflow: hidden;
+    animation: move 2.5s linear infinite;
+  }
+
+  &.loaded > div {
+    opacity: 0;
+    transform: translateX(200%);
+
+    transition: transform var.$slow ease-out, opacity 0 2s;
+  }
+}
+
+@keyframes move {
+  0% {
+    left:-75%
+  }
+  100% {
+    left: -25%;
+  }
+}

@@ -1,0 +1,68 @@
+@use "../../styles/variables" as var;
+@use "../../styles/functions";
+
+$toggleButtonHeight: 22px;
+
+.toggleButton {
+    position: relative;
+    display: flex;
+    width: auto;
+    height: $toggleButtonHeight;
+    color: var.$white;
+
+    > div {
+        position: relative;
+        width: $toggleButtonHeight*2;
+        height: 100%;
+        margin: 0;
+
+        #toggle {
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+        
+        #background {
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            background: var.$black;
+            border: 1px solid var.$white;
+            transition: 0.3s;
+            border-radius: 999px;
+    
+            &:before {
+                position: absolute;
+                content: "";
+                height: $toggleButtonHeight*0.72;
+                width: $toggleButtonHeight*0.72;
+                left: 50%;
+                bottom: 50%;
+                background-color: var.$white;
+                border-radius: 50%;
+                transition: transform 0.3s;
+                transform: translateX(-115%) translateY(50%);
+              }
+        }
+    }
+    
+    &.checked #background {
+        background-color: var.$white;
+
+        &:before {
+            transform: translateX(15%) translateY(50%);
+            background-color: var.$black;
+        }
+    }
+
+
+    #label {
+        width: max-content;
+        line-height: $toggleButtonHeight;
+        margin-left: 10px;
+        cursor: pointer;
+    }
+}

@@ -1,0 +1,117 @@
+@use "./variables" as var;
+@use "./functions";
+
+.marquee {
+	position: relative;
+	overflow: hidden;
+	width: 100%;
+	max-width: none;
+
+	> div {
+		position: relative;
+		width: 120%;
+		left: 0;
+		top: 0;
+		overflow: hidden;
+	}
+
+	.marquee__inner {
+		width: max-content;
+		display: flex;
+		position: relative;
+		animation: marquee 15s linear infinite;
+	}
+
+	&.marqueeInv {
+		margin-top:0;
+
+		.marquee__inner {
+			animation: marqueeInv 45s linear infinite;
+		}
+	}
+	
+	span {
+		padding: 0 1rem;
+		flex-shrink: 0;
+	}
+
+	// Disable animation on scroll on mobile and speed up sliding animation
+
+	@include functions.responsive(mobile) {
+		> div {
+			will-change: unset;
+			transform: none !important;
+		}
+
+		.marquee__inner {
+			animation-duration: 5s;
+		}
+
+		&.marqueeInv .marquee__inner {
+			animation-duration: 15s;
+		}
+	}
+}
+
+.valuesTitle.marquee {
+		.marquee__inner {
+			width: max-content;
+			animation: marqueeValues 3s linear infinite;
+		}
+
+		span {
+			padding: 0 0.4rem;
+		}
+}
+
+.servicesTitle.marquee {
+	.marquee__inner {
+		animation: marqueeSvc 4s linear infinite;
+	}
+
+	span {
+		padding: 0 0.4rem;
+	}
+}
+
+
+@keyframes marquee {
+    0% {
+        transform: translate3d(-10%, 0, 0);
+    }
+
+    100% {
+        transform: translate3d(-20%, 0, 0);
+    }
+}
+
+@keyframes marqueeInv {
+    0% {
+        transform: translate3d(-16.67%, 0, 0);
+    }
+
+    100% {
+        transform: translate3d(0%, 0, 0);
+    }
+}
+
+@keyframes marqueeValues {
+    0% {
+        transform: translate3d(0%, 0, 0);
+    }
+
+    100% {
+        transform: translate3d(-5%, 0, 0);
+    }
+}
+
+
+@keyframes marqueeSvc {
+    0% {
+        transform: translate3d(0%, 0, 0);
+    }
+
+    100% {
+        transform: translate3d(-7.69%, 0, 0);
+    }
+}

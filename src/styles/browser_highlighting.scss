@@ -1,0 +1,9 @@
+@use "./variables" as var;
+
+::selection {
+    color: var.$white;
+    // background: var.$blue; Queda demasiado chillón comparado con el patrón, por eso lo transparentamos un poco
+    background: #0000f0aa;
+    -webkit-text-fill-color: var.$white;
+    -webkit-text-stroke-width: 0;
+}
