@@ -1,0 +1,60 @@
+
+@use "../../styles/variables" as var;
+@use "../../styles/functions";
+
+$sliderPadding: 0 1rem;
+
+#workoutsSlider {
+    position: relative;
+
+    // prevent selection on mouse clic
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+    -khtml-user-select: none; /* Konqueror HTML */
+    -moz-user-select: none; /* Old versions of Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+    user-select: none; /* Non-prefixed version, currently supported by Chrome, Edge, Opera and Firefox */
+    
+    .workoutsSlide {
+        padding: $sliderPadding;
+        box-sizing: border-box;
+        overflow: visible;
+        position: relative;
+    }
+
+    .slick-active {
+        .trainerName, .trainerSlogan, .workoutsList > svg {
+            transform: translateX(0) !important; 
+            opacity: 1 !important;
+        }
+
+        @for $i from 1 through 4 {
+            .workoutsList > svg:nth-child(#{$i}n) {
+                $delay: calc(var.$fast / 2.5);
+                transition-delay: #{$i * $delay - $delay};
+            }
+        }
+
+        .trainersOverlay {
+            width: 35%;
+            height: 100%;
+            z-index: 1;
+
+            @include functions.responsive(desktop) {
+                width: 45%;
+            }
+        }
+
+    }
+        
+    // slick-slider overrides 
+    .slick-slider {
+        .slick-slide {
+            width: 70vw;
+
+            @include functions.responsive(desktop) {
+                width: 50vw;
+            }
+        }
+    }    
+}

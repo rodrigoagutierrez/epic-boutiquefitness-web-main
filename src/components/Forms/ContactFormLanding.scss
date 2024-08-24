@@ -1,0 +1,136 @@
+@use "../../styles/functions";
+@use "../../styles/variables" as var;
+
+.contactFormLanding {
+	font-size: 1rem;
+	position: relative;
+	overflow: hidden;
+	margin-bottom: 1rem;
+
+	input,
+	textarea {
+		box-shadow: none;
+		border: 1px solid var.$black;
+		background-color: var.$white;
+		padding: 0.6rem 0.3rem 0.3rem;
+		box-sizing: content-box;
+
+	
+		margin-bottom: 0.5rem;
+	
+		font-size: inherit;
+		text-transform: none;
+		font-family: inherit;
+		font-weight: inherit;
+		color: var.$black;
+
+		box-sizing: border-box;
+		width: 100%;
+	}
+
+	.checkbox {
+		text-align: left;
+
+		input {
+			width: 16px;
+			height: 16px;
+			margin: 0 5px 0 0;
+			border-radius: 0;
+			accent-color: var.$black;
+			
+			// -webkit-appearance: none;
+			// -moz-appearance: none;
+			// appearance: none;
+
+			&:checked{
+				accent-color: var.$black;
+			}
+		}
+	
+		label {
+			display: inline-block;
+			font-weight: 400;
+			color: var.$black;
+
+			a {
+				text-decoration: underline;
+			}
+		}
+
+	}
+
+
+	&.showInvalid input:invalid {
+		border: 1px solid var.$magenta;
+	}
+
+	input:-webkit-autofill,
+	input:-webkit-autofill:hover,
+	input:-webkit-autofill:focus,
+	input:-webkit-autofill:active {
+		box-shadow: 0 0 0 30px var.$turquoise inset !important;
+    	-webkit-box-shadow: 0 0 0 30px var.$turquoise inset !important;
+		-webkit-text-fill-color: var.$black !important;
+	}
+
+	input:focus,
+	textarea:focus {
+		box-shadow: none;
+		outline: none;
+		background-color: var.$turquoise;
+		color: var.$white;
+	}
+	
+	input::placeholder,
+	textarea::placeholder,
+	button {
+		font-family: "Gobold", 'Trebuchet MS', Arial, sans-serif;
+		font-weight: 500;
+		text-transform: uppercase;
+		-webkit-text-fill-color:  var.$black;
+		width: 100%;
+	}
+	
+
+	button {
+		border: 1px solid var.$black;
+	}
+
+	textarea {
+		display: block;
+		height: 10rem;
+		width: 100%;
+	}
+	
+	.formSubmit {
+		position: relative;
+		text-align: center;
+		margin-left: -2px;
+		width: calc(100% + 4px);
+	}
+	
+	.formSubmit button {
+		padding: 0.3rem 0.3rem 0.25rem;
+		width: 100%;
+		color: var.$black;
+		border-radius: 0;
+		font-size: inherit;
+
+		transition: width var.$medium ease-out, margin-left var.$medium ease-out;
+	}
+
+	.formSubmit button:hover {
+		width: 104%;
+		margin-left: -2%;
+		-webkit-text-fill-color: var.$white;
+	}
+
+	.formSubmit button:active {
+		color: var.$black;
+		-webkit-text-fill-color:  var.$black;
+	}
+
+	&:invalid .formSubmit button {
+		opacity: 0.85;
+	}
+}

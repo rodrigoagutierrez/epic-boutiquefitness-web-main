@@ -1,11 +1,23 @@
-import React from 'react';
+// main imports
+import * as React from "react";
+
+// plugin imports
+import { Link } from "gatsby-plugin-react-i18next";
+
+// style imports
+import "../../styles/main.scss";
 import "./LandingHeader.scss";
 
-const Header = () => (
-  <header style={{ textAlign: 'center', padding: '20px 0' }}>
-    <h1 style={{ fontWeight: 'bold', fontSize: '2.5rem' }}>EPIC</h1>
-    <p>BOUTIQUE FITNESS</p>
+import Logo from "../../svg/logo/logoTag.svg";
+
+const HeaderLanding = () => (
+  <header >
+    <div className="topHeader">
+      <Link to="/">
+        <Logo className="landingNavLogo" />
+      </Link>
+    </div>
   </header>
 );
 
-export default Header;
+export default HeaderLanding;

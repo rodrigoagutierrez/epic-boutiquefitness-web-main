@@ -259,11 +259,11 @@
 }
 
 // Trainers section
-#trainers {
+#classes {
 	max-width: none;
 	width: 100%;
 
-	.trainersTitle {
+	.workoutsTitle {
 		width: 100%;
 		overflow: hidden;
 		perspective: 250px;
@@ -465,12 +465,14 @@
 }
 
 #contact {	
+	background-color: var.$white;;
 	
 	.contactTitle {
 		display: flex;
 		align-items: flex-end;
 		justify-content:space-between;
 		margin-bottom: 2rem;
+		color: var.$black;
 		
 		h1 {
 			margin-bottom: 0;

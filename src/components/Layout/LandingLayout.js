@@ -9,12 +9,11 @@ import "./LandingLayout.scss";
 import "../../styles/main.scss";
 
 // components imports
+import HeaderLanding from "../Sections/LandingHeader";
 import WhappButton from "./WhappButton";
 import CookieBanner from "./CookiesBanner";
 
 // svg imports
-import BlackArrow from "../../svg/blackArrow.svg";
-import Logo from "../../svg/logo/logoTag.svg";
 import BookNowButton from "./BookNowButton";
 import Footer from "./Footer";
 
@@ -36,7 +35,6 @@ export default function LandingLayout({ children }) {
 
 	const { t } = useTranslation();
 
-
 	const footerList = {
 		about: [
 			{ link: "/#contact", text: t("contact") },
@@ -56,18 +54,13 @@ export default function LandingLayout({ children }) {
 	return (
 		<>
 			<nav>
-				<div className="topArrow">
-					<BlackArrow />
-					<div></div>
-				</div>
-				<Link to="/">
-					<Logo className="navLogo" />
-				</Link>
+				<HeaderLanding />
 			</nav>
 			<CookieBanner />
 			<WhappButton />
 			<BookNowButton />
 			<main>{children}</main>
+
 
 			<Footer footerList={footerList} />
 		</>

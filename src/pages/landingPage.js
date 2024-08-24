@@ -5,9 +5,10 @@ import { graphql } from "gatsby";
 // plugin imports
 import { Trans, useTranslation } from "react-i18next";
 import { Link } from "gatsby-plugin-react-i18next";
+import { Parallax } from "react-scroll-parallax";
 
 // style imports
-import "./landingPage.scss";
+import "./landingpage.scss";
 
 // svg imports
 import BlackArrow from "../svg/blackArrow.svg";
@@ -24,11 +25,10 @@ import PatternWhapp from "../svg/patterns/patternWhapp.svg";
 import LandingLayout from "../components/Layout/LandingLayout.js";
 import Seo from "../components/Seo/Seo.js";
 import LandingHeader from "../components/Sections/LandingHeader.js";
-import ContactForm from "../components/Forms/ContactForm";
-import ContactDetails from "../components/Sections/ContactDetails";
-import FirstTimer from "../components/Sections/FirstTimer";
+import ContactFormLanding from "../components/Forms/ContactFormLanding";
 import WorkoutSelector from "../components/Sections/WorkoutSelector";
 import Video from "../components/Video/Video";
+import Workouts from "../components/Sections/Workouts";
 
 // video imports
 import LandingVideo from "../videos/landing.mp4";
@@ -37,13 +37,6 @@ import LandingVideoV from "../videos/landingV.mp4";
 // page
 export default function LandingPage() {
 	const { t } = useTranslation();
-
-
-	const separator = (
-		<div className="separator blackArrow">
-			<BlackArrow />
-		</div>
-	);
 
 	return (
 		<LandingLayout>
@@ -63,62 +56,13 @@ export default function LandingPage() {
 					</h1>
 				</div>
 
-				<ContactForm />
+				<ContactFormLanding />
 			</div>
-			<ContactDetails />
-			<div className="landing">
-				<Video
-					src={LandingVideo}
-					srcV={LandingVideoV}
-					className="landingVideo"
-				/>
-
-				<div className="blackArrow">
-					<BlackArrow />
-				</div>
-				
-			</div>
-			{/* Intro section */}
-			<div className="section invert">
-				<div id="intro">
-					<div>
-						<h2 className="boxxy">
-							<Trans>Join us</Trans>
-						</h2>
-						<p>
-							<Trans>
-								at EPIC in barrio ensanche, Valencia and let us guide you
-								through a whole host of classes designed to improve your
-								fitness, strength and overall wellbeing
-							</Trans>
-						</p>
-						<p>
-							<Trans>
-								we've made sure that all our workouts work for you, no matter
-								beginner to advanced, we have you covered
-							</Trans>
-						</p>
-					</div>
-
-					<Link to="/join" className="joinUsCTA">
-						<div className="stripeBg blueBg">
-							<span className="boxxy">
-								<Trans>Come and try for free</Trans>
-							</span>
-						</div>
-					</Link>
-				</div>
-			</div>
-			{separator}
-			{/* Workout section */}
-
-			<WorkoutSelector />
-		
-			{separator}
+			
 			{/* About section */}
 			<div id="about">
 				<h1 className="boxxy">
-					<Trans>About EPIC</Trans>
+					<Trans>why EPIC</Trans>
 				</h1>
 				<div className="storyText">
 					{/* <div> */}
@@ -157,7 +101,40 @@ export default function LandingPage() {
 				</Link>
 
 			</div>
+			{/* Classes section */}
+			<div id="classes">
+				<div className="workoutsTitle">
+					
+					<Parallax
+						rotateX={[20, 0]}
+						rootMargin={{ top: 0, right: 0, bottom: -750, left: 0 }}
+					>
+						<h1 className="boxxy outline">
+							<Trans>workouts</Trans>
+						</h1>
+					</Parallax>
 
+				</div>
+
+				<Workouts />
+			</div>
+			<div className="landing">
+				<Video
+					src={LandingVideo}
+					srcV={LandingVideoV}
+					className="landingVideo"
+				/>
+
+				<div className="blackArrow">
+					<BlackArrow />
+				</div>
+				
+			</div>
+			
+			{/* Workout section */}
+
+			<WorkoutSelector />
+	
 		</LandingLayout>
 	);
 }
