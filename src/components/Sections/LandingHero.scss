@@ -11,33 +11,27 @@
     justify-content: center; /* Centra horizontalmente el contenido */
     position: relative;
     color: var.$white;
-  }
-  
-  .hero-overlay {
-    text-align: center;
-    background: rgba(0, 0, 0, 0.5); /* Fondo semitransparente detrás del texto */
-    padding: 20px;
-    border-radius: 8px;
+    
+    @include functions.responsive(mobile) {
+        height: 80vh;
+        text-align: center;
+    }
   }
   
   .hero-title {
-    font-size: 2.5rem;
+    font-size: 4.5rem;
     font-weight: bold;
     margin-bottom: 20px;
     text-transform: uppercase;
-  }
-  
-  .hero-button {
-    background-color: #000; /* Color del botón */
-    color: #fff; /* Color del texto */
-    padding: 10px 20px;
-    border: none;
-    border-radius: 4px;
-    font-size: 1rem;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-  
-  .hero-button:hover {
-    background-color: #444; /* Color al hacer hover */
+    text-align: center;
+
+    .h1 {
+        margin-bottom: 0;
+    }
+
+    @include functions.responsive(mobile) {
+        font-size: 3.5rem;
+        display: flex;
+        text-align: center;
+    }
   }

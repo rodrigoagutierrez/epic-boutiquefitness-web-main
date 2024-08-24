@@ -2,6 +2,21 @@
 @use "/src/styles/variables" as var;
 
 
+body {
+    top: 0;
+    left: 0;
+    margin: 0;
+
+    background: var.$white !important;
+
+    color: var.$black;
+
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    line-height: 1.4em;
+    
+}
+
 .landing {
 	position: relative;
 	height: 90vh;
@@ -423,7 +438,6 @@
 	}
 }
 
-
 // Contact section
 
 #contact, #contact2 {
@@ -432,7 +446,7 @@
 }
 
 #contact {	
-	background-color: var.$white;;
+	background-color: var.$white;
 	
 	.contactTitle {
 		display: flex;

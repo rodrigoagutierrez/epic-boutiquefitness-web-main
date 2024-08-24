@@ -24,11 +24,12 @@ import PatternWhapp from "../svg/patterns/patternWhapp.svg";
 import LandingLayout from "../components/Layout/LandingLayout.js";
 import Seo from "../components/Seo/Seo.js";
 import LandingHeader from "../components/Sections/LandingHeader.js";
+import CommunitySlider from "../components/Sections/CommunitySlider";
 import ContactFormLanding from "../components/Forms/ContactFormLanding";
 import WorkoutSelector from "../components/Sections/WorkoutSelector";
 import Video from "../components/Video/Video";
 import Workouts from "../components/Sections/Workouts";
-import LandingHero from "../components/Sections/LandingHero.js";
+import LandingHero from "../components/Sections/LandingHero";
 
 // video imports
 import LandingVideo from "../videos/landing.mp4";
@@ -39,7 +40,7 @@ export default function LandingPage() {
 	const { t } = useTranslation();
 
 	return (
-		<LandingLayout>
+		<LandingLayout >
 			<Seo title={t("Home")} />
 			<PatternWhite />
 			<PatternBlack />
@@ -58,6 +59,18 @@ export default function LandingPage() {
 				</div>
 
 				<ContactFormLanding />
+			</div>
+			{/* Community section */}
+			<div className="section invert">
+				<div id="community">
+					<span className="titleExtras bold">
+						<Trans>we are not just a studio, we are a</Trans>
+					</span>
+					<h1 className="boxxy outline">
+						<Trans>community</Trans>
+					</h1>
+					<CommunitySlider />
+				</div>
 			</div>
 			
 			{/* About section */}

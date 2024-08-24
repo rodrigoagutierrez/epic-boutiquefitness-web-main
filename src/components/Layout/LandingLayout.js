@@ -59,7 +59,7 @@ export default function LandingLayout({ children }) {
 			<CookieBanner />
 			<WhappButton />
 			<BookNowButton />
-			<main>{children}</main>
+			<main id="section invert">{children}</main>
 
 
 			<Footer footerList={footerList} />
