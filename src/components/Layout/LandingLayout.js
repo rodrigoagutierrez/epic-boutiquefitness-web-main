@@ -2,7 +2,7 @@
 import * as React from "react";
 
 // plugin imports
-import { Link, useTranslation } from "gatsby-plugin-react-i18next";
+import { useTranslation } from "gatsby-plugin-react-i18next";
 
 // style imports
 import "./LandingLayout.scss";

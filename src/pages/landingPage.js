@@ -11,7 +11,6 @@ import { Parallax } from "react-scroll-parallax";
 import "./landingpage.scss";
 
 // svg imports
-import BlackArrow from "../svg/blackArrow.svg";
 
 // patterns
 import PatternWhite from "../svg/patterns/patternWhite.svg";
@@ -29,6 +28,7 @@ import ContactFormLanding from "../components/Forms/ContactFormLanding";
 import WorkoutSelector from "../components/Sections/WorkoutSelector";
 import Video from "../components/Video/Video";
 import Workouts from "../components/Sections/Workouts";
+import LandingHero from "../components/Sections/LandingHero.js";
 
 // video imports
 import LandingVideo from "../videos/landing.mp4";
@@ -48,6 +48,7 @@ export default function LandingPage() {
 			<PatternTurquoise />
 			<PatternWhapp />
 			<LandingHeader />
+			<LandingHero />
 			{/* Contact section */}
 			<div id="contact">
 				<div className="contactTitle">
@@ -124,11 +125,6 @@ export default function LandingPage() {
 					srcV={LandingVideoV}
 					className="landingVideo"
 				/>
-
-				<div className="blackArrow">
-					<BlackArrow />
-				</div>
-				
 			</div>
 			
 			{/* Workout section */}

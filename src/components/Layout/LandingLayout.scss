@@ -2,6 +2,10 @@
 @use "/src/styles/functions";
 
 
+body {
+    background-color: var.$white;
+}
+
 .topHeader {
     position: fixed;
     top: 0;

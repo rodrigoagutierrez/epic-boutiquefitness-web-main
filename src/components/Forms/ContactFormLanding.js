@@ -156,7 +156,7 @@ export default function ContactFormLanding({
 				</div>
 			</form>
 			{sent === true && (
-				<div className="formPopUp stripeBorder turquoiseBorder">
+				<div className="landingFormPopUp stripeBorder turquoiseBorder">
 					<span className="bold">
 						<Trans>success!</Trans>
 					</span>
@@ -181,7 +181,7 @@ export default function ContactFormLanding({
 				</div>
 			)}
 			{sent === false && (
-				<div className="formError stripeBorder magentaBorder">
+				<div className="landingFormError stripeBorder magentaBorder">
 					<span className="bold">
 						<Trans>error!</Trans>
 					</span>

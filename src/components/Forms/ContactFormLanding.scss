@@ -6,6 +6,7 @@
 	position: relative;
 	overflow: hidden;
 	margin-bottom: 1rem;
+	background-color: var.$white;
 
 	input,
 	textarea {
@@ -133,4 +134,33 @@
 	&:invalid .formSubmit button {
 		opacity: 0.85;
 	}
+}
+
+.landingFormPopUp {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: var.$white;
+	color: var.$black;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: nowrap;
+    flex-direction: column;
+
+	text-align: center;
+	padding: 1rem 6rem;
+
+	box-sizing: border-box;
+
+	span {
+		display: contents;
+	}
+}
+
+.landingFormError {
+	padding: 1rem 2rem;
 }
