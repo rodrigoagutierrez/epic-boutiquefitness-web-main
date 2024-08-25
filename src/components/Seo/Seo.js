@@ -69,7 +69,18 @@ function Seo({ description, lang, meta, title }) {
 					content: metaDescription,
 				},
 			].concat(meta)}
-		/>
+			>
+			{/* Código de seguimiento de Google Ads */}
+			{/* <script async src="https://www.googletagmanager.com/gtag/js?id=AW-XXXXXXXXXX"></script>
+			<script>
+				{`
+					window.dataLayer = window.dataLayer || [];
+					function gtag(){dataLayer.push(arguments);}
+					gtag('js', new Date());
+					gtag('config', 'AW-XXXXXXXXXX');
+				`}
+			</script> */}
+		</Helmet>
 	);
 }
 
