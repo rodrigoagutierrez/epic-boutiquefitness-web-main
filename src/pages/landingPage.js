@@ -61,7 +61,7 @@ export default function LandingPage() {
 				<ContactFormLanding />
 			</div>
 			{/* Community section */}
-			<div className="section invert">
+			<div id="community" className="section invert">
 				<div id="community">
 					<span className="titleExtras bold">
 						<Trans>we are not just a studio, we are a</Trans>
@@ -72,9 +72,8 @@ export default function LandingPage() {
 					<CommunitySlider />
 				</div>
 			</div>
-			
 			{/* About section */}
-			<div id="about">
+			<div id="about" className="section invert">
 				<h1 className="boxxy">
 					<Trans>why EPIC</Trans>
 				</h1>
@@ -106,7 +105,7 @@ export default function LandingPage() {
 					</p>
 					{/* </div> */}
 				</div>
-				<Link to="/join" className="joinUsCTA">
+				<Link to="/join" className="landingJoinUsCTA">
 					<div className="stripeBg blueBg">
 						<span className="boxxy">
 							<Trans>Book your free class</Trans>
@@ -116,7 +115,7 @@ export default function LandingPage() {
 
 			</div>
 			{/* Classes section */}
-			<div id="classes">
+			{/* <div id="classes">
 				<div className="workoutsTitle">
 					
 					<Parallax
@@ -138,11 +137,11 @@ export default function LandingPage() {
 					srcV={LandingVideoV}
 					className="landingVideo"
 				/>
-			</div>
+			</div> */}
 			
 			{/* Workout section */}
 
-			<WorkoutSelector />
+			{/* <WorkoutSelector /> */}
 	
 		</LandingLayout>
 	);

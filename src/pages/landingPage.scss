@@ -164,11 +164,12 @@ body {
     }
 }
 
-.joinUsCTA {
+.landingJoinUsCTA {
 	display: inline-block;
-	margin-top: 4rem;
+	margin-top: 0;
 	background-color: var.$black;
 	padding: 2px;
+	margin-bottom: 10em;
 
 	> div {
 		padding: 0.5rem 1.5rem 0.3rem;
@@ -201,6 +202,7 @@ body {
 .titleExtras {
 	font-size: 1.1rem;
 	text-align: center;
+	text-transform: uppercase;
 	width: 100%;
 	display: block;
 	margin: 0.3rem 0;
@@ -241,53 +243,53 @@ body {
 }
 
 // Trainers section
-#classes {
-	max-width: none;
-	width: 100%;
+// #classes {
+// 	max-width: none;
+// 	width: 100%;
 
-	.workoutsTitle {
-		width: 100%;
-		overflow: hidden;
-		perspective: 250px;
+// 	.workoutsTitle {
+// 		width: 100%;
+// 		overflow: hidden;
+// 		perspective: 250px;
 
-		h1 {
-			text-align: center;
-			font-size: min(15vw, 8rem);
-			margin-bottom: 0;
-		}
+// 		h1 {
+// 			text-align: center;
+// 			font-size: min(15vw, 8rem);
+// 			margin-bottom: 0;
+// 		}
 	
-		.desktopTitleExtras{
-			display: none;
-		}
+// 		.desktopTitleExtras{
+// 			display: none;
+// 		}
 		
-		.mobileTitleExtras {
-			margin-bottom: 4rem;
-		}
+// 		.mobileTitleExtras {
+// 			margin-bottom: 4rem;
+// 		}
 
-		@include functions.responsive(desktop) {
-			display: flex;
-			align-items: center;
-			justify-content: center;
-			gap: 3rem;
+// 		@include functions.responsive(desktop) {
+// 			display: flex;
+// 			align-items: center;
+// 			justify-content: center;
+// 			gap: 3rem;
 
-			h1 {
-				margin-top: 2rem;
-				margin-bottom: 2rem;
-			}
+// 			h1 {
+// 				margin-top: 2rem;
+// 				margin-bottom: 2rem;
+// 			}
 
-			.desktopTitleExtras {
-				width: auto;
-				display: block;
-			}
+// 			.desktopTitleExtras {
+// 				width: auto;
+// 				display: block;
+// 			}
 
-			.mobileTitleExtras {
-				display: none;
-			}
-		}
-	}
+// 			.mobileTitleExtras {
+// 				display: none;
+// 			}
+// 		}
+// 	}
 
 
-}
+// }
 
 // Bio section
 #about {
@@ -299,9 +301,17 @@ body {
 	position: relative;
 	flex-direction: column;
 	align-items: center;
+	
+	@include functions.responsive(desktop) {
+		margin-top: -8em;
+	}
+
+	@include functions.responsive(mobile) {
+		margin-top: -10em;
+	}
 
 	h1 {
-		margin-bottom: 1rem;
+		margin-bottom: 0rem;
 	}
 
 	.storyText {
@@ -323,20 +333,9 @@ body {
 			margin-top: 0;
 		}
 
-		// div {
-		// 	&:first-child {
-		// 		max-width: 58.5%;
-		// 		flex-grow: 1;
-
-		// 		p {
-		// 			margin-bottom: 1.4em;
-		// 		}
-		// 	}
-
-		// 	&:last-child {
-		// 		flex-shrink: 2;
-		// 	}
-		// }
+		@include functions.responsive(mobile) {
+			margin-bottom: -8em;
+		}
 	}
 	
 	.sidelinesButton {
@@ -429,6 +428,7 @@ body {
 #community {
 	max-width: none;
 	width: 100%;
+	margin-bottom: 0;
 
 	h1 {
 		text-align: center;
@@ -447,6 +447,10 @@ body {
 
 #contact {	
 	background-color: var.$white;
+
+	@include functions.responsive(mobile) {
+		margin-top: 0;
+	}
 	
 	.contactTitle {
 		display: flex;
