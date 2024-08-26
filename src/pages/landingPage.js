@@ -5,7 +5,6 @@ import { graphql } from "gatsby";
 // plugin imports
 import { Trans, useTranslation } from "react-i18next";
 import { Link } from "gatsby-plugin-react-i18next";
-import { Parallax } from "react-scroll-parallax";
 
 // style imports
 import "./landingpage.scss";
@@ -26,14 +25,8 @@ import Seo from "../components/Seo/Seo.js";
 import LandingHeader from "../components/Sections/LandingHeader.js";
 import CommunitySlider from "../components/Sections/CommunitySlider";
 import ContactFormLanding from "../components/Forms/ContactFormLanding";
-import WorkoutSelector from "../components/Sections/WorkoutSelector";
-import Video from "../components/Video/Video";
-import Workouts from "../components/Sections/Workouts";
+import LandingWorkoutContent from "../components/Sections/LandingWorkoutContent";
 import LandingHero from "../components/Sections/LandingHero";
-
-// video imports
-import LandingVideo from "../videos/landing.mp4";
-import LandingVideoV from "../videos/landingV.mp4";
 
 // page
 export default function LandingPage() {
@@ -141,7 +134,7 @@ export default function LandingPage() {
 			
 			{/* Workout section */}
 
-			{/* <WorkoutSelector /> */}
+			<LandingWorkoutContent />
 	
 		</LandingLayout>
 	);

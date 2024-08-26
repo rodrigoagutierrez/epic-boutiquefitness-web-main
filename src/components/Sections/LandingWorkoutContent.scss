@@ -1,0 +1,187 @@
+@use "../../styles/variables" as var;
+@use "../../styles/functions";
+
+$containerHeight: 25rem;
+$overlayWidth: 150%;
+
+#workoutContent {
+	scroll-margin-top: 120px;
+
+	@include functions.responsive(desktop) {
+		scroll-margin-top: 25vh;
+	};
+}
+
+.workoutContent {
+	position: relative;
+	margin-top: 4rem;
+	margin-bottom: 6rem;
+	min-height: $containerHeight;
+	width: 100%;
+	overflow: hidden;
+	box-sizing: border-box;
+
+	display: flex;
+	flex-direction: column;
+	align-items: flex-end;
+	justify-content: space-between;
+
+	.workoutBg {
+		width: 100%;
+		height: auto;
+
+		@include functions.responsive(desktop) {
+			position: absolute;
+			height: $containerHeight;
+			top: 0;
+			right: 0;
+		}
+	}
+
+	.workoutOverlay {
+		position: absolute;
+		top: 0;
+		right: 0;
+		width: $overlayWidth;
+		height: 100%;
+
+		z-index: 2;
+	}
+
+	.workoutTransitionOverlay {
+		position: absolute;
+		top: 0;
+		right: auto;
+		left: -25vw;
+		width: 150vw;
+		height: calc(100% + 2rem);
+
+		z-index: 4;
+
+		transform: translateX(150vw);
+
+		background: var.$black;
+	}
+
+	.workoutSpecs {
+		position: absolute;
+		top: 0;
+		right: 1rem;
+		margin-top: 1rem;
+		width: $overlayWidth;
+
+		text-align: right;
+
+		z-index: 3;
+
+		div {
+			margin-bottom: 1rem;
+
+			span {
+				font-size: 1.4em;
+			}
+		}
+	}
+
+	.workoutText {
+
+		h2 {
+			margin: 0;
+		}
+
+		width: 90%;
+		margin-top: 1rem;
+		
+		align-self: flex-start;
+		
+		z-index: 3;
+
+		br {
+			content: "";
+			display: block;
+			margin: 0.5em;
+		}
+	}
+
+	&.ptraining {
+		justify-content: center;
+	}
+
+	@include functions.responsive(desktop) {
+		.workoutBg {
+			max-width: 1000px;
+		}
+
+		.workoutText {
+			width: 30%;
+		}
+	}
+}
+
+
+/* Switch states */
+/* enter */
+.switch-enter {
+	.workoutTransitionOverlay {
+		transform: translateX(0);
+	}
+	
+	.workoutBg {
+		transform: translateX(-3rem);
+	}
+
+	.workoutSpecs > div, .workoutText {
+		transform: translateX(3rem);
+	}
+  
+    &.switch-enter-active {
+		> *, .workoutSpecs > div {
+			transform: translateX(0);
+			transition: transform var.$medium ease-out;
+		}
+
+		.workoutSpecs > div:nth-child(2) {
+			transition-delay: calc(var.$fast / 3);
+		}
+
+		.workoutTransitionOverlay {
+			transform: translateX(150vw);
+			transition: transform var.$fast ease-out;
+		}
+    }
+}
+  
+/* exit */
+.switch-exit {
+	*, .workoutSpecs > div {
+		transform: translateX(0);
+
+	}
+
+	.workoutTransitionOverlay {
+		transform: translateX(-150vw);
+	}
+  
+     &.switch-exit-active {
+		* {
+			transition: transform var.$medium ease-in;
+		}
+
+		.workoutSpecs > div:nth-child(2) {
+			transition-delay: calc(var.$fast / 3);
+		}
+
+		.workoutBg {
+			transform: translateX(-3rem);
+		}
+
+		.workoutSpecs > div , .workoutText {
+			transform: translateX(3rem);
+		}
+
+		.workoutTransitionOverlay {
+			transform: translateX(0);
+			transition: transform var.$fast ease-in;
+		}
+    }
+}
