@@ -73,12 +73,12 @@ export default function WorkoutsImages({
 				// console.log(data);
 
 				return (
-					<div className="trainerImageAndTextComponent">
-						<div className={`trainerName boxxy stripes ${textColor}`}>
+					<div className="workoutComponent">
+						<div className={`trainerName boxxy  ${textColor}`}>
 							<p>{text}</p>
 						</div>
 						<div className="imageTextContainer">
-							<div className="trainersOverlay stripeBg black"></div>
+							<div className="trainersOverlay black"></div>
 							<GatsbyImage
 								className="imageBg"
 								image={imgArray[0]?.node?.childImageSharp?.gatsbyImageData}
@@ -92,7 +92,7 @@ export default function WorkoutsImages({
 								objectFit="contain"
 							/>
 						</div>
-						<div className="trainerSlogan bold outline">{slogan}</div>
+						<div className="trainerSlogan bold white">{slogan}</div>
 						{/* <div className="workoutsList">{workoutList}</div> */}
 					</div>
 				);

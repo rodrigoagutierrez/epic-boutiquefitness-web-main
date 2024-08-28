@@ -2,7 +2,7 @@
 @use "../../styles/variables" as var;
 @use "../../styles/functions";
 
-.trainerImageAndTextComponent {
+.workoutComponent {
     position: relative;
     width: 100%;
 
@@ -55,7 +55,7 @@
 
         font-size: max(15vw,4.5rem);
 
-        z-index: 2;
+        z-index: 3;
 
         opacity: 0;
         transform: translateX(1rem);
@@ -69,9 +69,9 @@
         @include functions.responsive(desktop) {
             left: auto;
             text-align: right;
-            right: 53%;
-            top: 1rem;
-            font-size: 6rem;
+            right: 70%;
+            top: 2rem;
+            font-size: 5rem;
         }
     }
 
@@ -130,9 +130,9 @@
 
         @include functions.responsive(desktop) {
             bottom: 1rem;
-            right: 20%;
+            right: 1%;
             width: max(20rem,40%);
-            font-size: 2rem;
+            font-size: 1.7rem;
             line-height: 2.4rem;
         }
     }

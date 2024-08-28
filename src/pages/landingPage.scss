@@ -192,13 +192,6 @@ body {
 	overflow-x: hidden;
 }
 
-#services.servicesTitle, #values.valuesTitle {
-	margin-bottom: 0;
-	padding-bottom: 0;
-	width: 100%;
-	max-width: none;
-}
-
 .titleExtras {
 	font-size: 1.1rem;
 	text-align: center;
@@ -242,8 +235,9 @@ body {
 	}
 }
 
-// Trainers section
+// Workout section
 #classes {
+	margin: 0 auto 12rem auto;
 	max-width: none;
 	width: 100%;
 

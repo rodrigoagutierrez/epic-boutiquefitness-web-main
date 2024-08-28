@@ -71,23 +71,23 @@ export default function WorkoutsSlider() {
 	}, []);
 
 	return (
-		<div id="trainersSlider" ref={containerRef}>
+		<div id="workoutsSlider" ref={containerRef}>
 			<Slider {...sliderSettings} className="stripeBg" ref={sliderRef}>
 				
 				<div className="trainersSlide">
 					<WorkoutsImages
-						pic="bootcamp"
+						pic="crossfit1"
 						text="Bootcamp"
 						workouts={["bootcamp"]}
-						slogan={t("loving the challenge every time I teach")}
+						slogan={t("Power your body and endurance with every drop of sweat")}
 					/>
 				</div>
 				<div className="trainersSlide">
 					<WorkoutsImages
-						pic="crossfit"
+						pic="crossfit1"
 						text="Crossfit"
 						workouts={["crossfit"]}
-						slogan={t("motivated to get you moving")}
+						slogan={t("Challenge your limits, sculpt your body, surpass the impossible")}
 					/>
 				</div>
 				<div className="trainersSlide">
@@ -95,7 +95,7 @@ export default function WorkoutsSlider() {
 						pic="epic45"
 						text="Epic45"
 						workouts={[ "epic45"]}
-						slogan={t("serial fitness junkie")}
+						slogan={t("Activate your core, sculpt your strength, and power your body with TRX Fusion")}
 					/>
 				</div>
 				<div className="trainersSlide">
@@ -103,7 +103,7 @@ export default function WorkoutsSlider() {
 						pic="yoga1"
 						text="Yoga"
 						workouts={["yoga"]}
-						slogan={t("be fearless in the pursuit of your goal")}
+						slogan={t("Revitalize, strengthen, and unify mind and body through dynamic movement")}
 					/>
 				</div>
 				
