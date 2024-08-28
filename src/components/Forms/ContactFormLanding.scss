@@ -8,6 +8,10 @@
 	margin-bottom: 1rem;
 	background-color: var.$white;
 
+	@include functions.responsive(mobile) {
+		margin-top: 1em;
+	}
+
 	input,
 	textarea {
 		box-shadow: none;
@@ -60,7 +64,6 @@
 
 	}
 
-
 	&.showInvalid input:invalid {
 		border: 1px solid var.$magenta;
 	}
@@ -92,7 +95,6 @@
 		width: 100%;
 	}
 	
-
 	// button {
 	// 	border: 1px solid var.$black;
 	// }

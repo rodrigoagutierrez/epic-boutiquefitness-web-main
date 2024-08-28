@@ -98,6 +98,25 @@ b, .bold {
     }
 }
 
+.outlineLanding {
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke-color: var.$black;
+    -webkit-text-stroke-width: 1px;
+    font-weight: 800;
+
+    &.blue {
+        -webkit-text-stroke-color: var.$blue;
+    } 
+    
+    &.turquoise {
+        -webkit-text-stroke-color: var.$turquoise;
+    } 
+    
+    &.magenta {
+        -webkit-text-stroke-color: var.$magenta;
+    }
+}
+
 .invert .outline {
     -webkit-text-stroke-color: var.$black;  
 }

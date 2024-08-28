@@ -6,18 +6,17 @@ import { useTranslation } from "gatsby-plugin-react-i18next";
 import Slider from "react-slick";
 
 // style imports
-import "./Workouts.scss";
-import "./Slider-theme.scss";
+import "./WorkoutsSlider.scss";
+import ".././Slider-theme.scss";
 import "slick-carousel/slick/slick.css";
 
 // svg imports
 
 // components imports
-import WorkoutsImages from "../ImageAndText/WorkoutsImages";
-
+import WorkoutsImages from "../../ImageAndText/WorkoutsImages";
 
 // component
-export default function TrainersSlider() {
+export default function WorkoutsSlider() {
 	const { t } = useTranslation();
 
 	var sliderSettings = {
@@ -72,49 +71,42 @@ export default function TrainersSlider() {
 	}, []);
 
 	return (
-		<div id="workoutsSlider" ref={containerRef}>
+		<div id="trainersSlider" ref={containerRef}>
 			<Slider {...sliderSettings} className="stripeBg" ref={sliderRef}>
 				
-				<div className="workoutsSlide">
+				<div className="trainersSlide">
 					<WorkoutsImages
 						pic="bootcamp"
 						text="Bootcamp"
 						workouts={["bootcamp"]}
-						slogan={t("Challenge your endurance with intense cardio and strength training")}
+						slogan={t("loving the challenge every time I teach")}
 					/>
 				</div>
-				<div className="workoutsSlide">
+				<div className="trainersSlide">
 					<WorkoutsImages
 						pic="crossfit"
 						text="Crossfit"
 						workouts={["crossfit"]}
-						slogan={t("Break barriers, sculpt your body, and push your limits")}
+						slogan={t("motivated to get you moving")}
 					/>
 				</div>
-				<div className="workoutsSlide">
+				<div className="trainersSlide">
 					<WorkoutsImages
 						pic="epic45"
 						text="Epic45"
-						workouts={["epic45"]}
-						slogan={t("Activate your core, strengthen your body, and boost your power")}
+						workouts={[ "epic45"]}
+						slogan={t("serial fitness junkie")}
 					/>
 				</div>
-				<div className="workoutsSlide">
+				<div className="trainersSlide">
 					<WorkoutsImages
 						pic="yoga1"
 						text="Yoga"
 						workouts={["yoga"]}
-						slogan={t("Revitalize your body and mind with flexibility and strength")}
+						slogan={t("be fearless in the pursuit of your goal")}
 					/>
 				</div>
-				{/* <div className="workoutsSlide">
-					<WorkoutsImages
-						pic="personal trainer"
-						text={t("Personal Trainer")}
-						workouts={["bootcamp", "epic45", "crossfit", "yoga"]}
-						slogan={t("Expert trainers: motivation, recovery, and personalized perfection")}
-					/>
-				</div> */}
+				
 			</Slider>
 		</div>
 	);

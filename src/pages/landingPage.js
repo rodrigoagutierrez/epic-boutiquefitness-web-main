@@ -20,13 +20,14 @@ import PatternMagenta from "../svg/patterns/patternMagenta.svg";
 import PatternWhapp from "../svg/patterns/patternWhapp.svg";
 
 // components imports
-import LandingLayout from "../components/Layout/LandingLayout.js";
-import Seo from "../components/Seo/Seo.js";
-import LandingHeader from "../components/Sections/LandingHeader.js";
+import LandingLayout from "../components/Layout/LandingLayout";
+import Seo from "../components/Seo/Seo";
+import LandingHeader from "../components/Sections/LandingPageSections/LandingHeader";
 import CommunitySlider from "../components/Sections/CommunitySlider";
 import ContactFormLanding from "../components/Forms/ContactFormLanding";
-import LandingWorkoutContent from "../components/Sections/LandingWorkoutContent";
-import LandingHero from "../components/Sections/LandingHero";
+import LandingHero from "../components/Sections/LandingPageSections/LandingHero";
+import WorkoutsSlider from "../components/Sections/LandingPageSections/WorkoutsSlider";
+
 
 // page
 export default function LandingPage() {
@@ -45,11 +46,11 @@ export default function LandingPage() {
 			<LandingHero />
 			{/* Contact section */}
 			<div id="contact">
-				<div className="contactTitle">
+				{/* <div className="contactTitle">
 					<h1 className="boxxy">
 						<Trans>Contact</Trans>
 					</h1>
-				</div>
+				</div> */}
 
 				<ContactFormLanding />
 			</div>
@@ -68,7 +69,7 @@ export default function LandingPage() {
 			{/* About section */}
 			<div id="about" className="section invert">
 				<h1 className="boxxy">
-					<Trans>why EPIC</Trans>
+					<Trans>Por qué EPIC</Trans>
 				</h1>
 				<div className="storyText">
 					{/* <div> */}
@@ -107,34 +108,11 @@ export default function LandingPage() {
 				</Link>
 
 			</div>
-			{/* Classes section */}
-			{/* <div id="classes">
-				<div className="workoutsTitle">
-					
-					<Parallax
-						rotateX={[20, 0]}
-						rootMargin={{ top: 0, right: 0, bottom: -750, left: 0 }}
-					>
-						<h1 className="boxxy outline">
-							<Trans>workouts</Trans>
-						</h1>
-					</Parallax>
-
-				</div>
-
-				<Workouts />
-			</div>
-			<div className="landing">
-				<Video
-					src={LandingVideo}
-					srcV={LandingVideoV}
-					className="landingVideo"
-				/>
-			</div> */}
 			
 			{/* Workout section */}
-
-			<LandingWorkoutContent />
+			<div id="classes">
+				<WorkoutsSlider />
+			</div>
 	
 		</LandingLayout>
 	);

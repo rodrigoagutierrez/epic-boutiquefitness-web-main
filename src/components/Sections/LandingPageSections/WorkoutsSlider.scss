@@ -1,10 +1,10 @@
 
-@use "../../styles/variables" as var;
-@use "../../styles/functions";
+@use "../../../styles/variables" as var;
+@use "../../../styles/functions";
 
 $sliderPadding: 0 1rem;
 
-#workoutsSlider {
+#trainersSlider {
     position: relative;
 
     // prevent selection on mouse clic
@@ -15,7 +15,7 @@ $sliderPadding: 0 1rem;
     -ms-user-select: none; /* Internet Explorer/Edge */
     user-select: none; /* Non-prefixed version, currently supported by Chrome, Edge, Opera and Firefox */
     
-    .workoutsSlide {
+    .trainersSlide {
         padding: $sliderPadding;
         box-sizing: border-box;
         overflow: visible;

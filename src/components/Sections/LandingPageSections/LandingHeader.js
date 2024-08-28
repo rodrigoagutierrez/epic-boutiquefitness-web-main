@@ -5,10 +5,10 @@ import * as React from "react";
 import { Link } from "gatsby-plugin-react-i18next";
 
 // style imports
-import "../../styles/main.scss";
+import "../../../styles/main.scss";
 import "./LandingHeader.scss";
 
-import Logo from "../../svg/logo/logoTag.svg";
+import Logo from "../../../svg/logo/logoTag.svg";
 
 const HeaderLanding = () => (
   <header >

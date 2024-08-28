@@ -9,10 +9,6 @@ import { GatsbyImage } from "gatsby-plugin-image";
 import "./WorkoutsImages.scss";
 
 // components imports
-// import BootcampImage from "../../images/bootcamp.jpeg";
-// import CrossfitImage from "../../images/crossfit.jpeg";
-// import Epic45Image from "../../images/epic45.jpeg";
-// import YogaImage from "../../images/yoga1.jpeg";
 
 // svg imports
 // workout icons
@@ -21,7 +17,7 @@ import CrossfitIcon from "../../svg/workouts/crossfit.svg";
 import Epic45Icon from "../../svg/workouts/epic45.svg";
 import YogaIcon from "../../svg/workouts/yoga.svg";
 
-export default function TrainerImageAndText({
+export default function WorkoutsImages({
 	pic,
 	text,
 	textColor = "turquoise",
@@ -99,7 +95,6 @@ export default function TrainerImageAndText({
 						<div className="trainerSlogan bold outline">{slogan}</div>
 						{/* <div className="workoutsList">{workoutList}</div> */}
 					</div>
-					
 				);
 			}}
 		/>

@@ -9,7 +9,7 @@ import "./LandingLayout.scss";
 import "../../styles/main.scss";
 
 // components imports
-import HeaderLanding from "../Sections/LandingHeader";
+import HeaderLanding from "../Sections/LandingPageSections/LandingHeader";
 import WhappButton from "./WhappButton";
 import CookieBanner from "./CookiesBanner";
 

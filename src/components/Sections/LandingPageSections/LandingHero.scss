@@ -1,9 +1,9 @@
-@use "/src/styles/functions";
-@use "/src/styles/variables" as var;
+@use "../../../styles/variables" as var;
+@use "../../../styles/functions";
 
 .hero {
     height: 100vh; /* Ocupa toda la altura de la ventana */
-    background-image: url('../../images/hero.jpeg'); /* Reemplaza con tu imagen de fondo */
+    background-image: url('../../../images/workouts/hero.jpeg');
     background-size: cover; /* Asegura que la imagen cubra todo el espacio */
     background-position: center; /* Centra la imagen de fondo */
     display: flex;
