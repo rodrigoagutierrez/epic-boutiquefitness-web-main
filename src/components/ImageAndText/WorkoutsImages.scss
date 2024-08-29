@@ -20,7 +20,7 @@
             height: 60vh;
         }
         
-        .trainersOverlay {
+        .WorkoutsOverlay {
             position: absolute;
             top: 0;
             right: 0;
@@ -38,9 +38,19 @@
             z-index: 0;
             pointer-events: none;
         }
+        
 
         .imageOverlay {
             z-index: 2;
+        }
+    }
+    
+    p {
+        transform: rotate(-90deg);
+
+        @include functions.responsive(desktop) {
+            margin-top: 3em;
+            
         }
     }
     
@@ -52,26 +62,31 @@
         top: 1rem;
         width: 100%;
         direction: rtl;
-
         font-size: max(15vw,4.5rem);
-
         z-index: 3;
-
         opacity: 0;
         transform: translateX(1rem);
         transition: transform var.$slow ease-out;
         
-        p {
-            margin: 0;
-        }
-
             
         @include functions.responsive(desktop) {
             left: auto;
             text-align: right;
-            right: 70%;
-            top: 2rem;
+            right: 42%;
+            top: 0;
             font-size: 5rem;
+        }
+        
+        @include functions.responsive(mobile) {
+            position: absolute;
+            left: -6rem;
+            text-align: right;
+            top: 2rem;
+            width: 100%;
+            direction: rtl;
+            font-size: max(15vw,3.5rem);
+            z-index: 3;
+            transition: transform var.$slow ease-out;
         }
     }
 

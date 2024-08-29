@@ -78,19 +78,19 @@ export default function WorkoutsImages({
 							<p>{text}</p>
 						</div>
 						<div className="imageTextContainer">
-							<div className="trainersOverlay black"></div>
+							<div className="workoutsOverlay black"></div>
 							<GatsbyImage
 								className="imageBg"
 								image={imgArray[0]?.node?.childImageSharp?.gatsbyImageData}
 								alt=""
-								objectFit="contain"
+								objectFit="cover"
 							/>
-							<GatsbyImage
+							{/* <GatsbyImage
 								className="imageOverlay"
 								image={imgArray[1]?.node?.childImageSharp?.gatsbyImageData}
 								alt=""
-								objectFit="contain"
-							/>
+								objectFit="fill"
+							/> */}
 						</div>
 						<div className="trainerSlogan bold white">{slogan}</div>
 						{/* <div className="workoutsList">{workoutList}</div> */}

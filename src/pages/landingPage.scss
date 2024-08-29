@@ -130,39 +130,38 @@ body {
 	}
 }
 
-
 // Intro Section
-#intro {
-	text-align: center;
-	max-width: 800px;
+// #intro {
+// 	text-align: center;
+// 	max-width: 800px;
 
-	.joinUsList {
-		position: relative;
-		text-align: left;
-		max-width: revert;
-        width: 100%;
-        margin-top: 4rem;
-		display: flex;
-		flex-wrap: wrap;
-		justify-content: center;
+// 	.joinUsList {
+// 		position: relative;
+// 		text-align: left;
+// 		max-width: revert;
+//         width: 100%;
+//         margin-top: 4rem;
+// 		display: flex;
+// 		flex-wrap: wrap;
+// 		justify-content: center;
 
-		> div {
-			width: 50%;
-			min-width: 375px;
-		}
+// 		> div {
+// 			width: 50%;
+// 			min-width: 375px;
+// 		}
 
-		.iconSeparator {
-			display: inline-block;
-			height: 0.85rem;
-			padding: 0 1rem;
-			margin-bottom: -1px;
+// 		.iconSeparator {
+// 			display: inline-block;
+// 			height: 0.85rem;
+// 			padding: 0 1rem;
+// 			margin-bottom: -1px;
 
-			polygon {
-				fill: var.$black !important;
-			}
-		}
-    }
-}
+// 			polygon {
+// 				fill: var.$black !important;
+// 			}
+// 		}
+//     }
+// }
 
 .landingJoinUsCTA {
 	display: inline-block;

@@ -72,7 +72,7 @@ export default function WorkoutsSlider() {
 
 	return (
 		<div id="workoutsSlider" ref={containerRef}>
-			<Slider {...sliderSettings} className="stripeBg" ref={sliderRef}>
+			<Slider {...sliderSettings} className="darkBg" ref={sliderRef}>
 				
 				<div className="trainersSlide">
 					<WorkoutsImages
