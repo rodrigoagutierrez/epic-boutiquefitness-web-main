@@ -2,20 +2,20 @@
 @use "/src/styles/variables" as var;
 
 
-body {
-    top: 0;
-    left: 0;
-    margin: 0;
+// body {
+//     top: 0;
+//     left: 0;
+//     margin: 0;
 
-    background: var.$white !important;
+//     background: var.$white !important;
 
-    color: var.$black;
+//     color: var.$black;
 
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 300;
-    line-height: 1.4em;
+//     font-family: 'Montserrat', sans-serif;
+//     font-weight: 300;
+//     line-height: 1.4em;
     
-}
+// }
 
 .landing {
 	position: relative;
@@ -73,13 +73,6 @@ body {
 	}
 }
 
-// .invert + .separator {
-// 	background-color: var.$white;
-
-// 	svg * {
-// 		fill: var.$black;
-// 	}
-// }
 
 
 #joinNowCTA {
@@ -237,6 +230,7 @@ body {
 
 #contact {	
 	background-color: var.$white;
+	z-index: 1;
 
 	@include functions.responsive(mobile) {
 		margin-top: 0;

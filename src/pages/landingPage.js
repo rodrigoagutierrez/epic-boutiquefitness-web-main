@@ -45,15 +45,18 @@ export default function LandingPage() {
 			<LandingHeader />
 			<LandingHero />
 			{/* Contact section */}
-			<div id="contact">
-				{/* <div className="contactTitle">
-					<h1 className="boxxy">
-						<Trans>Contact</Trans>
-					</h1>
-				</div> */}
+			<div className="section invert">
+				<div id="contact">
+					{/* <div className="contactTitle">
+						<h1 className="boxxy">
+							<Trans>Contact</Trans>
+						</h1>
+					</div> */}
 
-				<ContactFormLanding />
+					<ContactFormLanding />
+				</div>
 			</div>
+			
 			{/* Community section */}
 			<div id="community" className="section invert">
 				<div id="community">
@@ -110,9 +113,12 @@ export default function LandingPage() {
 			</div>
 			
 			{/* Workout section */}
-			<div id="classes">
-				<WorkoutsSlider />
+			<div className="section invert">
+				<div id="classes">
+					<WorkoutsSlider />
+				</div>
 			</div>
+			
 	
 		</LandingLayout>
 	);

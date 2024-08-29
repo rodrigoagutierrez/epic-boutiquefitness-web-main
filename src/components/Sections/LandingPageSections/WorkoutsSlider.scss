@@ -27,6 +27,9 @@ $sliderPadding: 0 1rem;
             transform: translateX(0) !important; 
             opacity: 1 !important;
         }
+        .trainerSlogan{
+            color: var.$white;
+        }
 
         @for $i from 1 through 4 {
             .workoutsList > svg:nth-child(#{$i}n) {
