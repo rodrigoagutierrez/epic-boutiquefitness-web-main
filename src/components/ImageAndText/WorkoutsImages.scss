@@ -45,15 +45,6 @@
         }
     }
     
-    p {
-        transform: rotate(-90deg);
-
-        @include functions.responsive(desktop) {
-            margin-top: 3em;
-            
-        }
-    }
-    
     
     .trainerName {
         position: absolute;
@@ -68,12 +59,15 @@
         transform: translateX(1rem);
         transition: transform var.$slow ease-out;
         
+        p {
+            transform: rotate(-90deg);
+        }
             
         @include functions.responsive(desktop) {
             left: auto;
             text-align: right;
             right: 42%;
-            top: 1em;
+            top: 3em;
             font-size: 5rem;
         }
         
