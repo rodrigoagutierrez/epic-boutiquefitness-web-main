@@ -47,11 +47,11 @@ export default function LandingPage() {
 			{/* Contact section */}
 			<div className="section invert">
 				<div id="contact">
-					{/* <div className="contactTitle">
+					<div className="contactTitle">
 						<h1 className="boxxy">
-							<Trans>Contact</Trans>
+							<Trans>Quiero mi clase gratis</Trans>
 						</h1>
-					</div> */}
+					</div>
 
 					<ContactFormLanding />
 				</div>
@@ -108,7 +108,7 @@ export default function LandingPage() {
 							<Trans>Book your free class</Trans>
 						</span>
 					</div>
-				</Link>
+				</Link>	
 
 			</div>
 			

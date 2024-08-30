@@ -73,8 +73,6 @@
 	}
 }
 
-
-
 #joinNowCTA {
 	.imageTextContainer {
 		width: 70%;
@@ -140,8 +138,11 @@
 			color: var.$black;
 		}
 	}
-}
 
+	@include functions.responsive(mobile) {
+		margin-bottom: -1em;
+	}
+}
 
 // .workoutTitle {
 // 	width: 100%;
@@ -189,6 +190,7 @@
 			align-items: center;
 			justify-content: center;
 			gap: 3rem;
+			padding-top: 0;
 
 			h1 {
 				margin-top: 2rem;
@@ -212,6 +214,7 @@
 	max-width: none;
 	width: 100%;
 	margin-bottom: 0;
+	margin-top: -4em;
 
 	h1 {
 		text-align: center;
@@ -219,10 +222,67 @@
 		margin-top: 0;
 		margin-bottom: 2rem;
 	}
+
+	@include functions.responsive(mobile) {
+		margin-top: 0;
+		margin-bottom: -10em;
+	}
+}
+
+#about {
+	display: flex;
+	width: 100%;
+	padding: 0 2%;
+	box-sizing: border-box;
+	max-width: none;
+	position: relative;
+	flex-direction: column;
+	align-items: center;
+
+	h1 {
+		margin-bottom: 1rem;
+	}
+
+	.storyText {
+		position: relative;
+		max-width: 800px;
+		vertical-align: baseline;
+
+		text-align: justify;
+		text-justify: inter-word;
+		gap: 2rem;
+		margin-bottom: 2em;
+		padding-bottom: 0;
+
+		p {
+			margin-top: 0;
+		}
+	}
+	
+	.sidelinesButton {
+		margin-top: 2rem;
+		transition: width 2s ease-out;
+	}
+
+	.sidelinesButton:hover {
+		* {
+			color: var.$white;
+			-webkit-text-fill-color: var.$white;
+			-webkit-text-stroke-width: 0;
+		}
+	}
+
+	.sidelinesButton:active {
+		* {
+			color: var.$black;
+			-webkit-text-fill-color: var.$black;
+			-webkit-text-stroke-width: 0.5px;
+		}
+	}
+
 }
 
 // Contact section
-
 #contact, #contact2 {
 	max-width: 800px;
 	margin-bottom: 1rem;
@@ -234,6 +294,7 @@
 
 	@include functions.responsive(mobile) {
 		margin-top: 0;
+		margin-bottom: -10em;
 	}
 	
 	.contactTitle {
@@ -244,7 +305,9 @@
 		color: var.$black;
 		
 		h1 {
+			margin-top: -1em;
 			margin-bottom: 0;
+			text-align: center !important;
 		}
 
 		span {
