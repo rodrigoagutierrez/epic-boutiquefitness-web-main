@@ -238,6 +238,36 @@
 	position: relative;
 	flex-direction: column;
 	align-items: center;
+	text-align: center;
+
+	.joinUsList {
+		max-width: 800px;
+		position: relative;
+		text-align: left;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+
+		@include functions.responsive(mobile) {
+			padding: 1em 0 1em 0em;
+		}
+
+		> div {
+			width: 50%;
+			min-width: 375px;
+		}
+
+		.iconSeparator {
+			display: inline-block;
+			height: 0.85rem;
+			padding: 0 1rem;
+			margin-bottom: -1px;
+
+			polygon {
+				fill: var.$black !important;
+			}
+		}
+    }
 
 	h1 {
 		margin-bottom: 1rem;

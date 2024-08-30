@@ -10,6 +10,7 @@ import { Link } from "gatsby-plugin-react-i18next";
 import "./landingpage.scss";
 
 // svg imports
+import Favicon from "../svg/favicon.svg";
 
 // patterns
 import PatternWhite from "../svg/patterns/patternWhite.svg";
@@ -32,6 +33,17 @@ import WorkoutsSlider from "../components/Sections/LandingPageSections/WorkoutsS
 // page
 export default function LandingPage() {
 	const { t } = useTranslation();
+
+	const joinUsList = [
+		<Trans>no minimum contract</Trans>,
+		<Trans>personalized attention</Trans>,
+		<Trans>classes adaptable to every level</Trans>,
+		<Trans>classes from 07:00 to 22:00</Trans>,
+		<Trans>reduced groups</Trans>,
+		<Trans>over 90 classes every week</Trans>,
+		<Trans>different workout every day</Trans>,
+		<Trans>results guaranteed</Trans>,
+	];
 
 	return (
 		<LandingLayout >
@@ -74,8 +86,19 @@ export default function LandingPage() {
 				<h1 className="boxxy">
 					<Trans>Por qué EPIC</Trans>
 				</h1>
-				<div className="storyText">
-					{/* <div> */}
+
+				<div className="joinUsList">
+						{joinUsList.map((el, i) => (
+							<div key={"joinList" + i}>
+								<Favicon className="iconSeparator" />
+								<span className="bold">
+									<span>{el}</span>
+								</span>
+							</div>
+						))}
+				</div>
+
+				{/* <div className="storyText">
 					<p>
 						<Trans>
 							EPIC was created for fitness followers and fanatics who need to
@@ -90,8 +113,6 @@ export default function LandingPage() {
 							EPIC.
 						</Trans>
 					</p>
-					{/* </div>
-					<div> */}
 					<p>
 						<Trans>
 							our workouts let you see hard work pay off in real-time, leaving
@@ -100,8 +121,8 @@ export default function LandingPage() {
 							fanatics by your side.
 						</Trans>
 					</p>
-					{/* </div> */}
-				</div>
+				</div> */}
+
 				<Link to="/join" className="landingJoinUsCTA">
 					<div className="stripeBg blueBg">
 						<span className="boxxy">
