@@ -22,7 +22,7 @@ export default function WorkoutsSlider() {
 	var sliderSettings = {
 		dots: false,
 		arrows: true,
-		infinite: false,
+		infinite: true,
 		speed: 500,
 		slidesToShow: 1,
 		slidesToScroll: 1,
@@ -32,6 +32,7 @@ export default function WorkoutsSlider() {
 		cssEase: "ease-out",
 		pauseOnHover: true,
 		variableWidth: true,
+		
 	};
 
 	const sliderRef = React.useRef(null);
@@ -71,15 +72,20 @@ export default function WorkoutsSlider() {
 	}, []);
 
 	return (
-		<div id="workoutsSlider" ref={containerRef}>
-			<Slider {...sliderSettings} className="darkBg" ref={sliderRef}>
+		<div id="workoutsSlider" className="whiteBg" ref={containerRef}>
+			<Slider {...sliderSettings} ref={sliderRef}>
 				
 				<div className="trainersSlide">
 					<WorkoutsImages
 						pic="crossfit1"
 						text="Bootcamp"
 						workouts={["bootcamp"]}
-						slogan={t("Power your body and endurance with every drop of sweat")}
+						slogan={
+							<>
+								<strong>{t("Power ")}</strong>{t("your body and")} <strong>{t("endurance")}</strong> {t("with every drop of sweat")}
+								
+							</>
+						}
 					/>
 				</div>
 				<div className="trainersSlide">
@@ -87,15 +93,27 @@ export default function WorkoutsSlider() {
 						pic="crossfit1"
 						text="Crossfit"
 						workouts={["crossfit"]}
-						slogan={t("Challenge your limits, sculpt your body, surpass the impossible")}
+						slogan={
+							<>
+								<strong>{t("Challenge")}</strong> {t("your limits",)} <strong>{t("sculpt ")}</strong>{t("your body, ")}
+						 <strong>{t("surpass ")}</strong>
+						{t("the impossible")}
+						</>
+						}
 					/>
 				</div>
+
 				<div className="trainersSlide">
 					<WorkoutsImages
 						pic="epic45"
 						text="Epic45"
 						workouts={[ "epic45"]}
-						slogan={t("Activate your core, sculpt your strength, and power your body with TRX Fusion")}
+						slogan={
+							<>
+							<strong>{t("Activate ")}</strong>
+							{t("your core, sculpt your strength, and")} <strong>{t("power ")}</strong>{t("your body with TRX Fusion")}
+							</>
+						}	
 					/>
 				</div>
 				<div className="trainersSlide">

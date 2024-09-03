@@ -6,6 +6,7 @@ $sliderPadding: 0 1rem;
 
 #workoutsSlider {
     position: relative;
+    border: 0;
 
     // prevent selection on mouse clic
     -webkit-touch-callout: none; /* iOS Safari */
@@ -14,6 +15,15 @@ $sliderPadding: 0 1rem;
     -moz-user-select: none; /* Old versions of Firefox */
     -ms-user-select: none; /* Internet Explorer/Edge */
     user-select: none; /* Non-prefixed version, currently supported by Chrome, Edge, Opera and Firefox */
+
+    .swiper-slide {
+        transition: transform 0.3s ease;
+        
+        &:hover,
+        &.swiper-slide-active {
+          transform: scale(1.5); // Aumenta ligeramente la escala de la imagen al pasar el ratón o cuando está activa
+        }
+      }
     
     .trainersSlide {
         padding: $sliderPadding;
@@ -29,7 +39,20 @@ $sliderPadding: 0 1rem;
         }
         .trainerSlogan{
             color: var.$white;
+            font-weight: lighter;
+            top: 1.5em;
+                
+
+            @include functions.responsive(mobile) {
+                top: 1.5em;
+                font-size: 1.4rem;
+                line-height: 1.5rem;
+            }
         }
+        .trainerSlogan strong {
+            font-weight: bold;
+        }
+
 
         @for $i from 1 through 4 {
             .workoutsList > svg:nth-child(#{$i}n) {
@@ -47,7 +70,6 @@ $sliderPadding: 0 1rem;
                 width: 45%;
             }
         }
-
     }
         
     // slick-slider overrides 

@@ -2,21 +2,6 @@
 @use "/src/styles/variables" as var;
 
 
-// body {
-//     top: 0;
-//     left: 0;
-//     margin: 0;
-
-//     background: var.$white !important;
-
-//     color: var.$black;
-
-//     font-family: 'Montserrat', sans-serif;
-//     font-weight: 300;
-//     line-height: 1.4em;
-    
-// }
-
 .landing {
 	position: relative;
 	height: 90vh;
@@ -123,10 +108,10 @@
 
 .landingJoinUsCTA {
 	display: inline-block;
-	margin-top: 0;
+	margin-top: 1em;
 	background-color: var.$black;
 	padding: 2px;
-	margin-bottom: 10em;
+	margin-bottom: 0;
 
 	> div {
 		padding: 0.5rem 1.5rem 0.3rem;
@@ -162,7 +147,7 @@
 
 // Workout section
 #classes {
-	margin: 0 auto 12rem auto;
+	margin: -2px auto 0 auto;
 	max-width: none;
 	width: 100%;
 
@@ -214,7 +199,7 @@
 	max-width: none;
 	width: 100%;
 	margin-bottom: 0;
-	margin-top: -4em;
+	margin-top: -14em;
 
 	h1 {
 		text-align: center;
@@ -239,6 +224,8 @@
 	flex-direction: column;
 	align-items: center;
 	text-align: center;
+	margin-bottom: -4em;
+	margin-top: -8em;
 
 	.joinUsList {
 		max-width: 800px;
