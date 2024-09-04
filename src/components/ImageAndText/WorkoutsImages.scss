@@ -5,12 +5,12 @@
 .workoutComponent {
     position: relative;
     overflow: hidden;
-    // width: 100%; 
+    width: 100%; 
 
     .imageTextContainer {
         position: relative;
         overflow: hidden;
-        // width: 100%;
+        width: 100%;
         margin: 2rem auto 0;
         height: 90vw;
         .swiper-slide-active & .imageBg {
@@ -58,6 +58,7 @@
         direction: rtl;
         font-size: max(15vw,4.5rem);
         bottom: 2.8em;
+        left: auto;
         z-index: 3;
         opacity: 0;
         transform: translateX(1rem);

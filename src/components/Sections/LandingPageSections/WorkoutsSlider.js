@@ -75,7 +75,7 @@ export default function WorkoutsSlider() {
 		<div id="workoutsSlider" className="whiteBg" ref={containerRef}>
 			<Slider {...sliderSettings} ref={sliderRef}>
 				
-				<div className="trainersSlide">
+				<div className="trainersSlide" >
 					<WorkoutsImages
 						pic="crossfit1"
 						text="Bootcamp"
@@ -121,7 +121,12 @@ export default function WorkoutsSlider() {
 						pic="yoga1"
 						text="Yoga"
 						workouts={["yoga"]}
-						slogan={t("Revitalize, strengthen, and unify mind and body through dynamic movement")}
+						slogan={
+							<>
+							<strong>{t("Revitalize, ")}</strong>{t("strengthen, and unify mind and body through ")}
+							 <strong>{t("dynamic movement")}</strong>
+							</>
+						}
 					/>
 				</div>
 				
