@@ -58,8 +58,8 @@ export default function LandingPage() {
 			<LandingHero />
 			{/* Contact section */}
 			<div className="section invert">
-				<div id="contact">
-					<div className="contactTitle">
+				<div id="LandingContact">
+					<div className="LandingContactTitle">
 						<h1 className="boxxy">
 							<Trans>Quiero mi clase gratis</Trans>
 						</h1>
@@ -68,19 +68,14 @@ export default function LandingPage() {
 					<ContactFormLanding />
 				</div>
 			</div>
-			
-			{/* Community section */}
-			<div id="community" className="section invert">
-				<div id="community">
-					<span className="titleExtras bold">
-						<Trans>we are not just a studio, we are a</Trans>
-					</span>
-					<h1 className="boxxy outline">
-						<Trans>community</Trans>
-					</h1>
-					<CommunitySlider />
+
+			{/* Workout section */}
+			<div className="section invert">
+				<div id="classes">
+					<WorkoutsSlider />
 				</div>
 			</div>
+
 			{/* About section */}
 			<div id="about" className="section invert">
 				<h1 className="boxxy">
@@ -97,8 +92,21 @@ export default function LandingPage() {
 							</div>
 						))}
 				</div>
-
-				{/* <div className="storyText">
+			
+			{/* Community section */}
+			<div id="community" className="section invert">
+				<div id="community">
+					<span className="titleExtras bold">
+						<Trans>we are not just a studio, we are a</Trans>
+					</span>
+					<h1 className="boxxy outline">
+						<Trans>community</Trans>
+					</h1>
+					<CommunitySlider />
+				</div>
+			</div>
+			
+			{/* <div className="storyText">
 					<p>
 						<Trans>
 							EPIC was created for fitness followers and fanatics who need to
@@ -133,14 +141,6 @@ export default function LandingPage() {
 
 			</div>
 			
-			{/* Workout section */}
-			<div className="section invert">
-				<div id="classes">
-					<WorkoutsSlider />
-				</div>
-			</div>
-			
-	
 		</LandingLayout>
 	);
 }

@@ -10,41 +10,36 @@ import "./WorkoutsImages.scss";
 
 // components imports
 
-// svg imports
-// workout icons
-import BootcampIcon from "../../svg/workouts/bootcamp.svg";
-import CrossfitIcon from "../../svg/workouts/crossfit.svg";
-import Epic45Icon from "../../svg/workouts/epic45.svg";
-import YogaIcon from "../../svg/workouts/yoga.svg";
 
 export default function WorkoutsImages({
 	pic,
 	text,
 	textColor = "turquoise",
 	slogan,
-	workouts = [],
-}) {
-	const iconSwitch = (workoutName) => {
-		switch (workoutName.toLowerCase()) {
-			case "crossfit":
-				return <CrossfitIcon key="crossfit" />;
-			case "bootcamp":
-				return <BootcampIcon key="bootcamp" />;
-			case "epic45":
-				return <Epic45Icon key="epic45" />;
-			case "yoga":
-				return <YogaIcon key="yoga" />;
-			default:
-				console.log("Icon not found");
-				return null;
-		}
-	};
+	// workouts = [],
+}) 
+	{
+	// const iconSwitch = (workoutName) => {
+	// 	switch (workoutName.toLowerCase()) {
+	// 		case "crossfit":
+	// 			return <CrossfitIcon key="crossfit" />;
+	// 		case "bootcamp":
+	// 			return <BootcampIcon key="bootcamp" />;
+	// 		case "epic45":
+	// 			return <Epic45Icon key="epic45" />;
+	// 		case "yoga":
+	// 			return <YogaIcon key="yoga" />;
+	// 		default:
+	// 			console.log("Icon not found");
+	// 			return null;
+	// 	}
+	// };
 
-	let workoutList = [];
+	// let workoutList = [];
 
-	workouts.forEach((workoutName) => {
-		workoutList.push(iconSwitch(workoutName));
-	});
+	// workouts.forEach((workoutName) => {
+	// 	workoutList.push(iconSwitch(workoutName));
+	// });
 
 	return (
 		<StaticQuery
