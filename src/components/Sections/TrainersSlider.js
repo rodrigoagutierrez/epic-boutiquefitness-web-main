@@ -83,14 +83,6 @@ export default function TrainersSlider() {
 				</div> */}
 				<div className="trainersSlide">
 					<TrainerImageAndText
-						pic="jenny"
-						text="Jenny"
-						workouts={["yoga"]}
-						slogan={t("loving the challenge every time I teach")}
-					/>
-				</div>
-				<div className="trainersSlide">
-					<TrainerImageAndText
 						pic="nelson"
 						text="Nelson"
 						workouts={["bootcamp", "crossfit"]}
@@ -99,18 +91,10 @@ export default function TrainersSlider() {
 				</div>
 				<div className="trainersSlide">
 					<TrainerImageAndText
-						pic="manu"
-						text="Manu"
-						workouts={["bootcamp", "epic45", "crossfit", "yoga"]}
-						slogan={t("serial fitness junkie")}
-					/>
-				</div>
-				<div className="trainersSlide">
-					<TrainerImageAndText
-						pic="julia"
-						text="Julia"
-						workouts={["bootcamp", "epic45", "crossfit", "yoga"]}
-						slogan={t("be fearless in the pursuit of your goal")}
+						pic="domenico"
+						text="Domenico"
+						workouts={["yoga"]}
+						slogan={t("loving the challenge every time I teach")}
 					/>
 				</div>
 				<div className="trainersSlide">
