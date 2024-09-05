@@ -39,45 +39,45 @@ $sliderPadding: 0 0.1rem;
         }
     }
 
-    // .slick-active {
-    //     .trainerName, .trainerSlogan, .workoutsList > svg {
-    //         transform: translateX(0) !important; 
-    //         opacity: 1 !important;
-    //     }
-    //     .trainerSlogan{
-    //         color: var.$white;
-    //         font-weight: lighter;
-    //         top: 1.5em;
+    .slick-active {
+        .trainerName, .trainerSlogan, .workoutsList > svg {
+            transform: translateX(0) !important; 
+            opacity: 1 !important;
+        }
+        .trainerSlogan{
+            color: var.$white;
+            font-weight: lighter;
+            top: 1.5em;
                 
 
-    //         @include functions.responsive(mobile) {
-    //             top: 1.5em;
-    //             font-size: 1.4rem;
-    //             line-height: 1.5rem;
-    //         }
-    //     }
-    //     .trainerSlogan strong {
-    //         font-weight: bold;
-    //     }
+            @include functions.responsive(mobile) {
+                top: 1.5em;
+                font-size: 1.4rem;
+                line-height: 1.5rem;
+            }
+        }
+        .trainerSlogan strong {
+            font-weight: bold;
+        }
 
 
-    //     @for $i from 1 through 4 {
-    //         .workoutsList > svg:nth-child(#{$i}n) {
-    //             $delay: calc(var.$fast / 2.5);
-    //             transition-delay: #{$i * $delay - $delay};
-    //         }
-    //     }
+        @for $i from 1 through 4 {
+            .workoutsList > svg:nth-child(#{$i}n) {
+                $delay: calc(var.$fast / 2.5);
+                transition-delay: #{$i * $delay - $delay};
+            }
+        }
 
-    //     .trainersOverlay {
-    //         width: 35%;
-    //         height: 100%;
-    //         z-index: 1;
+        .trainersOverlay {
+            width: 35%;
+            height: 100%;
+            z-index: 1;
 
-    //         @include functions.responsive(desktop) {
-    //             width: 45%;
-    //         }
-    //     }
-    // }
+            @include functions.responsive(desktop) {
+                width: 45%;
+            }
+        }
+    }
         
     // slick-slider overrides 
     .slick-slider {
