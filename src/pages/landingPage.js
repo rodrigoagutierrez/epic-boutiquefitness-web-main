@@ -82,7 +82,7 @@ export default function LandingPage() {
 					<Trans>Por qué EPIC</Trans>
 				</h1>
 
-				<div className="joinUsList">
+				<div className="LandingJoinUsList">
 						{joinUsList.map((el, i) => (
 							<div key={"joinList" + i}>
 								<Favicon className="iconSeparator" />
