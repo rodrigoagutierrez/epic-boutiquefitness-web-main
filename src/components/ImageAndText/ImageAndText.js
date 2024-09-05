@@ -19,8 +19,8 @@ export default function ImageAndText({ name, text, textStyle, textColor }) {
 			query={graphql`
 				query {
 					allFile(
-						sort: { fields: extension }
-						filter: { absolutePath: { regex: "/(imageAndText)/" } }
+						sort: { extension: ASC }
+						filter: { absolutePath: {regex: "/(imageAndText)/"}}
 					) {
 						edges {
 							node {

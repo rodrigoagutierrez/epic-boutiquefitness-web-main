@@ -85,17 +85,14 @@ $overlayWidth: 150%;
 	}
 
 	.workoutText {
+		width: 90%;
+		margin-top: 1rem;
+		align-self: flex-start;
+		z-index: 3;
 
 		h2 {
 			margin: 0;
 		}
-
-		width: 90%;
-		margin-top: 1rem;
-		
-		align-self: flex-start;
-		
-		z-index: 3;
 
 		br {
 			content: "";

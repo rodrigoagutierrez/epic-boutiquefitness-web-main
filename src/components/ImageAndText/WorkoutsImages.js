@@ -46,7 +46,7 @@ export default function WorkoutsImages({
 			query={graphql`
 				query {
 					allFile(
-						sort: { fields: extension }
+						sort: {extension: ASC}
 						filter: { absolutePath: { regex: "/(workouts)/" } }
 					) {
 						edges {
