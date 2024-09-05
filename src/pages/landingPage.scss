@@ -109,13 +109,13 @@
 .landingJoinUsCTA {
 	display: inline-block;
 	margin-top: 1em;
-	background-color: var.$black;
+	background-color: var.$white;
 	padding: 2px;
 	margin-bottom: 0;
 
 	> div {
 		padding: 0.5rem 1.5rem 0.3rem;
-		color: var.$white;
+		color: var.$black;
 		font-size: 1.2rem;
 		line-height: 1.2rem;
 
@@ -125,7 +125,38 @@
 	}
 
 	@include functions.responsive(mobile) {
-		margin-bottom: -1em;
+		margin-bottom: 5rem;
+	}
+}
+
+.joinUsList {
+	position: relative;
+	text-align: left;
+	max-width: revert;
+	width: 70% !important;
+	margin-top: 4rem;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+
+	@include functions.responsive(mobile) {
+		padding-bottom: 8rem !important;
+	}
+
+	> div {
+		width: 50%;
+		min-width: 375px;
+	}
+
+	.iconSeparator {
+		display: inline-block;
+		height: 0.85rem;
+		padding: 0 1rem;
+		margin-bottom: -1px;
+
+		polygon {
+			fill: var.$black !important;
+		}
 	}
 }
 
@@ -146,10 +177,15 @@
 // }
 
 // Workout section
-#classes {
-	margin: -2px auto 0 auto;
+#Landingclasses {
+	margin: -10rem auto 0 auto;
 	max-width: none;
 	width: 100%;
+
+	@include functions.responsive(mobile) {
+		padding-top: 0 !important;
+		margin: 0 !important;
+	}
 
 	.workoutsTitle {
 		width: 100%;
@@ -193,13 +229,81 @@
 		}
 	}
 }
+
+#Landingabout {
+	display: flex;
+	width: 100%;
+	padding: 0 2%;
+	box-sizing: border-box;
+	max-width: none;
+	position: relative;
+	flex-direction: column;
+	align-items: center;
+	margin-top: 0rem;
+
+	@include functions.responsive(mobile) {
+		margin-top: -7rem;
+		margin-bottom: 0;
+		padding-top: 1rem !important;
+		padding-bottom: 2rem !important;
+	}
+
+	h1 {
+		margin-bottom: 1rem;
+	}
+
+	.storyText {
+		position: relative;
+		max-width: 800px;
+		// display: flex;
+		// flex-wrap: nowrap;
+		// flex-direction: row;
+		// align-content: center;
+		// align-items: stretch;
+		// justify-content: center;
+		vertical-align: baseline;
+
+		text-align: justify;
+		text-justify: inter-word;
+		gap: 2rem;
+
+		p {
+			margin-top: 0;
+		}
+
+	}
+	
+	.sidelinesButton {
+		margin-top: 2rem;
+
+		transition: width 2s ease-out;
+	}
+
+	.sidelinesButton:hover {
+		* {
+			color: var.$white;
+			-webkit-text-fill-color: var.$white;
+			-webkit-text-stroke-width: 0;
+		}
+	}
+
+	.sidelinesButton:active {
+		* {
+			color: var.$black;
+			-webkit-text-fill-color: var.$black;
+			-webkit-text-stroke-width: 0.5px;
+		}
+	}
+
+}
  
 // Community section
-#community {
+#LandingCommunity {
 	max-width: none;
 	width: 100%;
-	margin-bottom: 0;
-	margin-top: -14em;
+	margin-bottom: 5rem;
+	margin-top: 0;
+	padding: 0 !important;
 
 	h1 {
 		text-align: center;
@@ -210,7 +314,7 @@
 
 	@include functions.responsive(mobile) {
 		margin-top: 0;
-		margin-bottom: -10em;
+		margin-bottom: 2em;
 	}
 }
 

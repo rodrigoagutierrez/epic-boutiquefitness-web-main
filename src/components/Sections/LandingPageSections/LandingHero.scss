@@ -40,32 +40,51 @@
   }
 
 .hero-button {
-    background-color: var.$white; /* Reemplaza con el color primario de tu tema */
-    color: var.$black;
-    font-size: 1.5rem;
-    font-weight: bold;
-    padding: 15px 30px;
-    text-transform: uppercase;
-    border: none;
-    // border-radius: 5px;
-    cursor: pointer;
-    text-align: center;
-    margin-top: 20px;
-    transition: background-color 0.3s ease;
+    background-color: var.$black;
+    padding: 10px 20px;
+    color: var.$white;
+    margin-top: 7rem;
+    border: 2px solid var.$black;
 
-    &:hover {
-        background-color: var.$grey;
-        color:var.$white /* O un color de hover específico */
+    @include functions.responsive(desktop) {
+        top: 8px;
+        right: 90px;
     }
+
+        a {
+            position: relative;
+            display: block;
+            margin: 0;
+            padding: 0.5rem 0.5rem 0.25rem 0.5rem;
+            box-sizing: border-box;
+            width: 100%;
+            color: var.$white !important;
+            
+            &:hover {
+                color: var.$black !important;
+                // -webkit-text-fill-color: var.$black;
+                // -webkit-text-stroke-width: 1px;
+                // -webkit-text-stroke-color: var.$white;
+            }
+        
+            &:active {
+                color: var.$black;
+            }
+
+            > h2 {
+                width: auto;
+                margin: 0 0;
+                font-size: 1.5rem;
+                text-align: right;
+            }
+        }
+
 
     @include functions.responsive(mobile) {
         font-size: 1.2rem;
         padding: 10px 20px;
     }
 
-    h2 {
-        margin: 0 !important;
-    }
 
 }
 

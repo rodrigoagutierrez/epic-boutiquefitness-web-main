@@ -71,13 +71,13 @@ export default function LandingPage() {
 
 			{/* Workout section */}
 			<div className="section invert">
-				<div id="classes">
+				<div id="Landingclasses">
 					<WorkoutsSlider />
 				</div>
 			</div>
 
 			{/* About section */}
-			<div id="about" className="section invert">
+			<div id="Landingabout" className="section invert">
 				<h1 className="boxxy">
 					<Trans>Por qué EPIC</Trans>
 				</h1>
@@ -94,8 +94,8 @@ export default function LandingPage() {
 				</div>
 			
 			{/* Community section */}
-			<div id="community" className="section invert">
-				<div id="community">
+			<div id="LandingCommunity" className="section invert">
+				<div>
 					<span className="titleExtras bold">
 						<Trans>we are not just a studio, we are a</Trans>
 					</span>
