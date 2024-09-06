@@ -2,11 +2,8 @@
 @use "/src/styles/variables" as var;
 
 
-body {
-	background-color: var.$white !important;
-}
-
 .landing {
+	background-color: var.$white;
 	position: relative;
 	height: 90vh;
 	overflow: hidden;
@@ -189,6 +186,7 @@ body {
 	max-width: none;
 	width: 100%;
 
+
 	@include functions.responsive(mobile) {
 		padding-top: 0 !important;
 		margin: 0 !important;
@@ -261,26 +259,25 @@ body {
 		margin-bottom: 1rem;
 	}
 
-	.storyText {
-		position: relative;
-		max-width: 800px;
-		// display: flex;
-		// flex-wrap: nowrap;
-		// flex-direction: row;
-		// align-content: center;
-		// align-items: stretch;
-		// justify-content: center;
-		vertical-align: baseline;
+	// .storyText {
+	// 	position: relative;
+	// 	max-width: 800px;
+	// 	display: flex;
+	// 	flex-wrap: nowrap;
+	// 	flex-direction: row;
+	// 	align-content: center;
+	// 	align-items: stretch;
+	// 	justify-content: center;
+	// 	vertical-align: baseline;
+	// 	text-align: justify;
+	// 	text-justify: inter-word;
+	// 	gap: 2rem;
 
-		text-align: justify;
-		text-justify: inter-word;
-		gap: 2rem;
+	// 	p {
+	// 		margin-top: 0;
+	// 	}
 
-		p {
-			margin-top: 0;
-		}
-
-	}
+	// }
 	
 	.sidelinesButton {
 		margin-top: 2rem;
@@ -328,7 +325,7 @@ body {
 }
 
 // Contact section
-#LandingContact, #LandingContact2 {
+#LandingContact {
 	max-width: 800px;
 	margin-bottom: 1rem;
 }

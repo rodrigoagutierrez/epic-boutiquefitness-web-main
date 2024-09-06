@@ -6,7 +6,7 @@ import { useTranslation } from "gatsby-plugin-react-i18next";
 
 // style imports
 import "./LandingLayout.scss";
-import "../../styles/main.scss";
+import "../../styles/landing_styles.scss";
 
 // components imports
 import HeaderLanding from "../Sections/LandingPageSections/LandingHeader";
@@ -59,7 +59,7 @@ export default function LandingLayout({ children }) {
 			<CookieBanner />
 			<WhappButton />
 			<BookNowButton />
-			<main id="section invert">{children}</main>
+			<main className="landinPage">{children}</main>
 
 
 			<Footer footerList={footerList} />

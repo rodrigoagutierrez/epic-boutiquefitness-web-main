@@ -46,7 +46,7 @@ export default function LandingPage() {
 	];
 
 	return (
-		<LandingLayout >
+		<LandingLayout className="landing" >
 			<Seo title={t("Home")} />
 			<PatternWhite />
 			<PatternBlack />
