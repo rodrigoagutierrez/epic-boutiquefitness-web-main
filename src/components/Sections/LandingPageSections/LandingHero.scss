@@ -55,7 +55,7 @@
             position: relative;
             display: block;
             margin: 0;
-            padding: 0.5rem 0.5rem 0.25rem 0.5rem;
+            padding: 1.5rem 1.5rem 1.25rem 1.5rem;
             box-sizing: border-box;
             width: 100%;
             color: var.$white !important;
@@ -74,7 +74,7 @@
             > h2 {
                 width: auto;
                 margin: 0 0;
-                font-size: 1.5rem;
+                font-size: 2.5rem !important;
                 text-align: right;
             }
         }

@@ -2,6 +2,10 @@
 @use "/src/styles/variables" as var;
 
 
+body {
+	background-color: var.$white !important;
+}
+
 .landing {
 	position: relative;
 	height: 90vh;
@@ -179,7 +183,7 @@
 
 // Workout section
 #Landingclasses {
-	margin: -10rem auto 0 auto;
+	margin: 0 auto 0 auto;
 	max-width: none;
 	width: 100%;
 
@@ -245,9 +249,9 @@
 	margin-top: 0rem;
 
 	@include functions.responsive(mobile) {
-		margin-top: -7rem;
+		margin-top: 0rem;
 		margin-bottom: 0;
-		padding-top: 1rem !important;
+		padding-top: 2rem !important;
 		padding-bottom: 2rem !important;
 	}
 
@@ -330,10 +334,11 @@
 #LandingContact {	
 	background-color: var.$white;
 	z-index: 1;
+	padding: 6rem 0 0rem 0 !important;
 
 	@include functions.responsive(mobile) {
 		margin-top: 0;
-		margin-bottom: -10em;
+		margin-bottom: 0;
 	}
 	
 	.LandingContactTitle {

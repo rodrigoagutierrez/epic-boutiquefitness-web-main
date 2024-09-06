@@ -70,11 +70,11 @@ export default function LandingPage() {
 			</div>
 
 			{/* Workout section */}
-			<div className="section invert">
-				<div id="Landingclasses">
-					<WorkoutsSlider />
-				</div>
+			
+			<div id="Landingclasses">
+				<WorkoutsSlider />
 			</div>
+			
 
 			{/* About section */}
 			<div id="Landingabout" className="section invert">
