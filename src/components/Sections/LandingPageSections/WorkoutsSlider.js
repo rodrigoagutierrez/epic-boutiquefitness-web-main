@@ -82,9 +82,10 @@ export default function WorkoutsSlider() {
 						workouts={["crossfit"]}
 						slogan={
 							<>
-								<strong>{t("Challenge")}</strong> {t("your limits",)} <strong>{t("sculpt ")}</strong>{t("your body, ")}
-								<strong>{t("surpass ")}</strong>
-								{t("the impossible")}
+								<strong>{t("Potencia")}</strong> 
+								{t("your body and",)} <strong>
+								{t("endurance ")}</strong>
+								{t("with every drop of sweat")}
 							</>
 						}
 					/>
@@ -96,10 +97,13 @@ export default function WorkoutsSlider() {
 						workouts={["crossfit"]}
 						slogan={
 							<>
-								<strong>{t("Challenge")}</strong> {t("your limits",)} <strong>{t("sculpt ")}</strong>{t("your body, ")}
-						 <strong>{t("surpass ")}</strong>
-						{t("the impossible")}
-						</>
+								<strong>{t("Challenge")}</strong> 
+								{t("your limits",)} 
+								<strong>{t("sculpt ")}</strong>
+								{t("your body, ")}
+								<strong>{t("surpass ")}</strong>
+								{t("the impossible")}
+							</>
 						}
 					/>
 				</div>
@@ -112,7 +116,9 @@ export default function WorkoutsSlider() {
 						slogan={
 							<>
 							<strong>{t("Activate ")}</strong>
-							{t("your core, sculpt your strength, and")} <strong>{t("power ")}</strong>{t("your body with TRX Fusion")}
+							{t("your core, sculpt your strength, and")} 
+							<strong>{t("power ")}</strong>
+							{t("your body with TRX Fusion")}
 							</>
 						}	
 					/>
@@ -124,8 +130,9 @@ export default function WorkoutsSlider() {
 						workouts={["yoga"]}
 						slogan={
 							<>
-							<strong>{t("Revitalize, ")}</strong>{t("strengthen, and unify mind and body through ")}
-							 <strong>{t("dynamic movement")}</strong>
+								<strong>{t("Revitalize, ")}</strong>
+								{t("strengthen, and unify mind and body through ")}
+							 	<strong>{t("dynamic movement")}</strong>
 							</>
 						}
 					/>
