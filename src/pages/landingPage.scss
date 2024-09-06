@@ -140,7 +140,8 @@
 	justify-content: center;
 
 	@include functions.responsive(mobile) {
-		padding-bottom: 8rem !important;
+		padding-top: 2rem !important;
+		padding-bottom: 4rem !important;
 	}
 
 	> div {
@@ -185,6 +186,8 @@
 	@include functions.responsive(mobile) {
 		padding-top: 0 !important;
 		margin: 0 !important;
+		margin-bottom: 0 !important;
+		padding-bottom: 0 !important;
 	}
 
 	.workoutsTitle {
