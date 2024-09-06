@@ -69,9 +69,7 @@ export default function WorkoutsImages({
 
 				return (
 					<div className="workoutComponent">
-						<div className={`trainerName boxxy ${textColor}`}>
-							<p>{text}</p>
-						</div>
+						
 						<div className="imageTextContainer">
 							<div className="workoutsOverlay black"></div>
 							<GatsbyImage
@@ -80,7 +78,9 @@ export default function WorkoutsImages({
 								alt=""
 								objectFit="cover"
 							/>
-							
+							<div className={`trainerName boxxy ${textColor}`}>
+								<p>{text}</p>
+							</div>
 						</div>
 						<div className="trainerSlogan bold white">{slogan}</div>
 						{/* <div className="workoutsList">{workoutList}</div> */}
