@@ -24,7 +24,7 @@ export default function WorkoutsSlider() {
 		arrows: true,
 		infinite: true,
 		speed: 500,
-		slidesToShow: 1,
+		slidesToShow: 2,
 		slidesToScroll: 1,
 		centerMode: true,
 		autoplay: false,
@@ -32,7 +32,6 @@ export default function WorkoutsSlider() {
 		cssEase: "ease-out",
 		pauseOnHover: true,
 		variableWidth: true,
-		
 	};
 
 	const sliderRef = React.useRef(null);
@@ -74,7 +73,6 @@ export default function WorkoutsSlider() {
 	return (
 		<div id="workoutsSlider" className="whiteBg" ref={containerRef}>
 			<Slider {...sliderSettings} ref={sliderRef}>
-				
 				<div className="trainersSlide">
 					<WorkoutsImages
 						pic="crossfit1"
@@ -82,8 +80,8 @@ export default function WorkoutsSlider() {
 						workouts={["crossfit"]}
 						slogan={
 							<>
-								<strong>{t("Power ")}</strong> 
-								{t("your body and ",)} 
+								<strong>{t("Power ")}</strong>
+								{t("your body and ")}
 								<strong>{t("endurance ")}</strong>
 								{t("with every drop of sweat")}
 							</>
@@ -97,8 +95,8 @@ export default function WorkoutsSlider() {
 						workouts={["crossfit"]}
 						slogan={
 							<>
-								<strong>{t("Challenge ")}</strong> 
-								{t("your limits ",)} 
+								<strong>{t("Challenge ")}</strong>
+								{t("your limits ")}
 								<strong>{t("sculpt ")}</strong>
 								{t("your body, ")}
 								<strong>{t("surpass ")}</strong>
@@ -112,15 +110,15 @@ export default function WorkoutsSlider() {
 					<WorkoutsImages
 						pic="epic45"
 						text="Epic45"
-						workouts={[ "epic45"]}
+						workouts={["epic45"]}
 						slogan={
 							<>
-							<strong>{t("Activate ")}</strong>
-							{t("your core, sculpt your strength, and ")} 
-							<strong>{t("power ")}</strong>
-							{t("your body with TRX Fusion")}
+								<strong>{t("Activate ")}</strong>
+								{t("your core, sculpt your strength, and ")}
+								<strong>{t("power ")}</strong>
+								{t("your body with TRX Fusion")}
 							</>
-						}	
+						}
 					/>
 				</div>
 				<div className="trainersSlide">
@@ -132,12 +130,11 @@ export default function WorkoutsSlider() {
 							<>
 								<strong>{t("Revitalize, ")}</strong>
 								{t("strengthen, and unify mind and body through ")}
-							 	<strong>{t("dynamic movement")}</strong>
+								<strong>{t("dynamic movement")}</strong>
 							</>
 						}
 					/>
 				</div>
-				
 			</Slider>
 		</div>
 	);

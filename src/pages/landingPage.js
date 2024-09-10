@@ -7,7 +7,7 @@ import { Trans, useTranslation } from "react-i18next";
 import { Link } from "gatsby-plugin-react-i18next";
 
 // style imports
-import "./landingpage.scss";
+import "./landingPage.scss";
 
 // svg imports
 import Favicon from "../svg/favicon.svg";
@@ -29,7 +29,6 @@ import ContactFormLanding from "../components/Forms/ContactFormLanding";
 import LandingHero from "../components/Sections/LandingPageSections/LandingHero";
 import WorkoutsSlider from "../components/Sections/LandingPageSections/WorkoutsSlider";
 
-
 // page
 export default function LandingPage() {
 	const { t } = useTranslation();
@@ -46,7 +45,7 @@ export default function LandingPage() {
 	];
 
 	return (
-		<LandingLayout className="landing" >
+		<LandingLayout className="landing">
 			<Seo title={t("Home")} />
 			<PatternWhite />
 			<PatternBlack />
@@ -70,11 +69,10 @@ export default function LandingPage() {
 			</div>
 
 			{/* Workout section */}
-			
+
 			<div id="Landingclasses">
 				<WorkoutsSlider />
 			</div>
-			
 
 			{/* About section */}
 			<div id="Landingabout" className="section invert">
@@ -83,30 +81,30 @@ export default function LandingPage() {
 				</h1>
 
 				<div className="LandingJoinUsList">
-						{joinUsList.map((el, i) => (
-							<div key={"joinList" + i}>
-								<Favicon className="iconSeparator" />
-								<span className="bold">
-									<span>{el}</span>
-								</span>
-							</div>
-						))}
+					{joinUsList.map((el, i) => (
+						<div key={"joinList" + i}>
+							<Favicon className="iconSeparator" />
+							<span className="bold">
+								<span>{el}</span>
+							</span>
+						</div>
+					))}
 				</div>
-			
-			{/* Community section */}
-			<div id="LandingCommunity" className="section invert">
-				<div>
-					<span className="titleExtras bold">
-						<Trans>we are not just a studio, we are a</Trans>
-					</span>
-					<h1 className="boxxy outline">
-						<Trans>community</Trans>
-					</h1>
-					<CommunitySlider />
+
+				{/* Community section */}
+				<div id="LandingCommunity" className="section invert">
+					<div>
+						<span className="titleExtras bold">
+							<Trans>we are not just a studio, we are a</Trans>
+						</span>
+						<h1 className="boxxy outline">
+							<Trans>community</Trans>
+						</h1>
+						<CommunitySlider />
+					</div>
 				</div>
-			</div>
-			
-			{/* <div className="storyText">
+
+				{/* <div className="storyText">
 					<p>
 						<Trans>
 							EPIC was created for fitness followers and fanatics who need to
@@ -137,10 +135,8 @@ export default function LandingPage() {
 							<Trans>Book your free class</Trans>
 						</span>
 					</div>
-				</Link>	
-
+				</Link>
 			</div>
-			
 		</LandingLayout>
 	);
 }

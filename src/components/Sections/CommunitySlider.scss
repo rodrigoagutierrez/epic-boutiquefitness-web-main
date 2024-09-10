@@ -1,123 +1,119 @@
-
 @use "../../styles/variables" as var;
 @use "../../styles/functions";
 
 $sliderPadding: 1rem;
 
 #communitySlider {
-    // prevent selection on mouse clic
-    -webkit-touch-callout: none; /* iOS Safari */
-    -webkit-user-select: none; /* Safari */
-    -khtml-user-select: none; /* Konqueror HTML */
-    -moz-user-select: none; /* Old versions of Firefox */
-    -ms-user-select: none; /* Internet Explorer/Edge */
-    user-select: none; /* Non-prefixed version, currently supported by Chrome, Edge, Opera and Firefox */
-    
-    .reviewSlide {
-        padding: $sliderPadding;
-        box-sizing: border-box;
+	// prevent selection on mouse clic
+	-webkit-touch-callout: none; /* iOS Safari */
+	-webkit-user-select: none; /* Safari */
+	-khtml-user-select: none; /* Konqueror HTML */
+	-moz-user-select: none; /* Old versions of Firefox */
+	-ms-user-select: none; /* Internet Explorer/Edge */
+	user-select: none; /* Non-prefixed version, currently supported by Chrome, Edge, Opera and Firefox */
 
-        > div {
-            display: flex;
-            flex-wrap: nowrap;
-            flex-direction: column;
-            position: relative;
-            gap: $sliderPadding;
+	.reviewSlide {
+		padding: $sliderPadding;
+		box-sizing: border-box;
 
-            @include functions.responsive(desktop) {
-                flex-direction: row;
-            }
-            
-            .reviewImg {
-                max-width: 30%;
-                object-fit: contain;
-                border-radius: 999px;
-                align-self: center;
+		> div {
+			display: flex;
+			flex-wrap: nowrap;
+			flex-direction: column;
+			position: relative;
+			gap: $sliderPadding;
 
-                @include functions.responsive(desktop) {
-                    max-width: 15%;
-                    border-radius: 0;
-                }
+			@include functions.responsive(desktop) {
+				flex-direction: row;
+			}
 
-                > img {
-                    height: auto;
-                }
-            }
+			.reviewImg {
+				max-width: 30%;
+				object-fit: contain;
+				border-radius: 999px;
+				align-self: center;
 
-            .reviewText {
-                display: flex;
-                flex-direction: column;
-                justify-content: space-between;
+				@include functions.responsive(desktop) {
+					max-width: 15%;
+					border-radius: 0;
+				}
 
-                @include functions.responsive(desktop) {
-                    width: 85%;
-                }
+				> img {
+					height: auto;
+				}
+			}
 
-                p {
-                    margin-block-start: 0;
-                }
-                
-                .reviewAuthor {
-                    font-size: 1.5rem;
-                    text-align: right;
-                    margin-bottom: 0;
-                }
-            }
-        }
-    }
+			.reviewText {
+				display: flex;
+				flex-direction: column;
+				justify-content: space-between;
 
-    > .hashtags {
-        width: 100%;
-        display: flex;
-        justify-content: space-evenly;
-        padding: 3rem 2rem 0 2rem;
-        box-sizing: border-box;
+				@include functions.responsive(desktop) {
+					width: 85%;
+				}
 
-        @include functions.responsive(desktop) {
-            padding-top: 0.85rem;
-            justify-content: space-between;
-        }
+				p {
+					margin-block-start: 0;
+				}
 
-        span {
-            display: block;
-        }
-    }
+				.reviewAuthor {
+					font-size: 1.5rem;
+					text-align: right;
+					margin-bottom: 0;
+				}
+			}
+		}
+	}
 
-        
-    // slick-slider overrides 
+	> .hashtags {
+		width: 100%;
+		display: flex;
+		justify-content: space-evenly;
+		padding: 3rem 2rem 0 2rem;
+		box-sizing: border-box;
 
-    .slick-slider {
+		@include functions.responsive(desktop) {
+			padding-top: 0.85rem;
+			justify-content: space-between;
+		}
 
-        .slick-slide {
-            width: 90vw;
-            max-width: 1300px;
-            padding: 0 0.6rem;
-            box-sizing: border-box;
-        }
+		span {
+			display: block;
+		}
+	}
 
-        .slick-track {
-            display: flex;
-            align-items: center;
-        }
+	// slick-slider overrides
 
-        .slick-dots {
-            bottom: -3rem;
+	.slick-slider {
+		.slick-slide {
+			width: 90vw;
+			max-width: 1300px;
+			padding: 0 0.6rem;
+			box-sizing: border-box;
+		}
 
-            li  {
-                button {
-                    border-radius: 9999px;
-                    border: 2px solid var.$black;
-                }
+		.slick-track {
+			display: flex;
+			align-items: center;
+		}
 
-                &.slick-active button {
-                    background: var.$black;
+		.slick-dots {
+			bottom: -3rem;
 
-                    &:before {
-                        opacity: 0;
-                    }
-                }
-            }
+			li {
+				button {
+					border-radius: 9999px;
+					border: 2px solid var.$black;
+				}
 
-        }
-    }    
+				&.slick-center button {
+					background: var.$black;
+
+					&:before {
+						opacity: 0;
+					}
+				}
+			}
+		}
+	}
 }
