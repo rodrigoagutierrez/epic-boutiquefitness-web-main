@@ -82,9 +82,9 @@ export default function WorkoutsSlider() {
 						workouts={["crossfit"]}
 						slogan={
 							<>
-								<strong>{t("Potencia")}</strong> 
-								{t("your body and",)} <strong>
-								{t("endurance ")}</strong>
+								<strong>{t("Power ")}</strong> 
+								{t("your body and ",)} 
+								<strong>{t("endurance ")}</strong>
 								{t("with every drop of sweat")}
 							</>
 						}
@@ -97,8 +97,8 @@ export default function WorkoutsSlider() {
 						workouts={["crossfit"]}
 						slogan={
 							<>
-								<strong>{t("Challenge")}</strong> 
-								{t("your limits",)} 
+								<strong>{t("Challenge ")}</strong> 
+								{t("your limits ",)} 
 								<strong>{t("sculpt ")}</strong>
 								{t("your body, ")}
 								<strong>{t("surpass ")}</strong>
@@ -116,7 +116,7 @@ export default function WorkoutsSlider() {
 						slogan={
 							<>
 							<strong>{t("Activate ")}</strong>
-							{t("your core, sculpt your strength, and")} 
+							{t("your core, sculpt your strength, and ")} 
 							<strong>{t("power ")}</strong>
 							{t("your body with TRX Fusion")}
 							</>
