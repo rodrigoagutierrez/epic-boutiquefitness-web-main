@@ -24,7 +24,7 @@ export default function WorkoutsSlider() {
 		arrows: true,
 		infinite: true,
 		speed: 500,
-		slidesToShow: 2,
+		slidesToShow: 1,
 		slidesToScroll: 1,
 		centerMode: true,
 		autoplay: false,
