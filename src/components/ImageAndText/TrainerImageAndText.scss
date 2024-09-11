@@ -74,6 +74,10 @@
             top: 1rem;
             font-size: 6rem;
         }
+
+        @include functions.responsive(mobile) {
+            font-size: max(15vw,4rem);
+        }
     }
 
 
