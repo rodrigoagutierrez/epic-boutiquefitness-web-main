@@ -33,7 +33,7 @@ export default function ContactForm({
 		// set ?acq=value for acquisition to have a value
 	});
 	// console.log(toSend);
-	console.log(toSend.privacy);
+	// console.log(toSend.privacy);
 
 	React.useEffect(() => {
 		const queryParams = queryString.parse(window?.location?.search);

@@ -51,7 +51,7 @@ export default function TrainerImageAndText({
 			query={graphql`
 				query {
 					allFile(
-						sort: {extension: ASC }
+						sort: { extension: ASC }
 						filter: { absolutePath: { regex: "/(trainers)/" } }
 					) {
 						edges {
