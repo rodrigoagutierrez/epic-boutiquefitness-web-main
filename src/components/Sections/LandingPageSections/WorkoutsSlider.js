@@ -77,7 +77,7 @@ export default function WorkoutsSlider() {
 				
 				<div className="trainersSlide">
 					<WorkoutsImages
-						pic="crossfit1"
+						pic="bootcamplp"
 						text="Bootcamp"
 						workouts={["crossfit"]}
 						slogan={
