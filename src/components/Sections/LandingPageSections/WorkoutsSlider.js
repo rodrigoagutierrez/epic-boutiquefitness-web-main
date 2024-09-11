@@ -22,7 +22,7 @@ export default function WorkoutsSlider() {
 	var sliderSettings = {
 		dots: false,
 		arrows: true,
-		infinite: true,
+		infinite: false,
 		speed: 500,
 		slidesToShow: 1,
 		slidesToScroll: 1,

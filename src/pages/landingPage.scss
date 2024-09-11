@@ -257,6 +257,10 @@
 
 	h1 {
 		margin-bottom: 1rem;
+
+		@include functions.responsive(mobile){
+			font-size: 3rem;
+		}
 	}
 
 	// .storyText {
@@ -351,6 +355,10 @@
 			margin-top: -1em;
 			margin-bottom: 0;
 			text-align: center !important;
+
+			@include functions.responsive(mobile){
+				font-size: 2.5rem;
+			}
 		}
 
 		span {
