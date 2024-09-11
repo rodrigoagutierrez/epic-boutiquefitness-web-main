@@ -1,92 +1,97 @@
-
 @use "../../../styles/variables" as var;
 @use "../../../styles/functions";
 
 $sliderPadding: 0 0.1rem;
 
 #workoutsSlider {
-    position: relative;
-    border: 0;
+	position: relative;
+	border: 0;
 
-    // prevent selection on mouse clic
-    -webkit-touch-callout: none; /* iOS Safari */
-    -webkit-user-select: none; /* Safari */
-    -khtml-user-select: none; /* Konqueror HTML */
-    -moz-user-select: none; /* Old versions of Firefox */
-    -ms-user-select: none; /* Internet Explorer/Edge */
-    user-select: none; /* Non-prefixed version, currently supported by Chrome, Edge, Opera and Firefox */
+	// prevent selection on mouse clic
+	-webkit-touch-callout: none; /* iOS Safari */
+	-webkit-user-select: none; /* Safari */
+	-khtml-user-select: none; /* Konqueror HTML */
+	-moz-user-select: none; /* Old versions of Firefox */
+	-ms-user-select: none; /* Internet Explorer/Edge */
+	user-select: none; /* Non-prefixed version, currently supported by Chrome, Edge, Opera and Firefox */
 
-    .swiper-slide {
-        transition: transform 0.3s ease;
-        
-        &:hover,
-        &.swiper-slide-active {
-          transform: scale(1.5); // Aumenta ligeramente la escala de la imagen al pasar el ratón o cuando está activa
-        }
-      }
-    
-    .trainersSlide {
-        padding: $sliderPadding;
-        box-sizing: border-box;
-        overflow: visible;
-        position: relative; // Asegura que z-index funcione
-        transition: transform 0.3s ease-in-out, z-index 0s; // Añade z-index en la transición para evitar saltos
+	.slick-slide {
+		transition: transform 0.3s ease;
+		will-change: transform;
+		position: relative;
 
-        // Aplica la escala al hacer hover o focus
-        &:hover, &:focus {
-            transform: scale(1.15);  // Escala al 105% del tamaño original
-            z-index: 10;             // Coloca el elemento por encima de los demás
-        }
-    }
+		// &:hover,
+		&.slick-center {
+			transform: scale(
+				1.15
+			); // Aumenta ligeramente la escala de la imagen al pasar el ratón o cuando está activa
+			z-index: 10;
+		}
+	}
 
-    .slick-active {
-        .trainerName, .trainerSlogan, .workoutsList > svg {
-            transform: translateX(0) !important; 
-            opacity: 1 !important;
-        }
-        .trainerSlogan{
-            color: var.$white;
-            font-weight: lighter;
-            top: 1.5em;
-                
+	.trainersSlide {
+		padding: $sliderPadding;
+		box-sizing: border-box;
+		overflow: visible;
+		position: relative; // Asegura que z-index funcione
+		transition: transform 0.3s ease-in-out, z-index 0s; // Añade z-index en la transición para evitar saltos
 
-            @include functions.responsive(mobile) {
-                top: 1.5em;
-                font-size: 1.4rem;
-                line-height: 1.5rem;
-            }
-        }
-        .trainerSlogan strong {
-            font-weight: bold;
-        }
+		// Aplica la escala al hacer hover o focus
+		// &:hover,
+		// &:focus {
+		// 	transform: scale(1.15); // Escala al 105% del tamaño original
+		// 	z-index: 10; // Coloca el elemento por encima de los demás
+		// }
+	}
 
+	.slick-center {
+		.trainerName,
+		.trainerSlogan,
+		.workoutsList > svg {
+			transform: translateX(0) !important;
+			opacity: 1 !important;
+		}
+		.trainerSlogan {
+			color: var.$white;
+			font-weight: lighter;
+			top: 1.5em;
 
-        @for $i from 1 through 4 {
-            .workoutsList > svg:nth-child(#{$i}n) {
-                $delay: calc(var.$fast / 2.5);
-                transition-delay: #{$i * $delay - $delay};
-            }
-        }
+			@include functions.responsive(mobile) {
+				top: 1.5em;
+				font-size: 1.4rem;
+				line-height: 1.5rem;
+			}
+		}
+		.trainerSlogan strong {
+			font-weight: bold;
+		}
 
-        .trainersOverlay {
-            width: 35%;
-            height: 100%;
-            z-index: 1;
+		@for $i from 1 through 4 {
+			.workoutsList > svg:nth-child(#{$i}n) {
+				$delay: calc(var.$fast / 2.5);
+				transition-delay: #{$i * $delay - $delay};
+			}
+		}
 
-            @include functions.responsive(desktop) {
-                width: 45%;
-            }
-        }
-    }
-        
-    // slick-slider overrides 
-    .slick-slider {
-        .slick-slide {
-            width: 70vw;
+		.trainersOverlay {
+			width: 35%;
+			height: 100%;
+			z-index: 1;
 
-            @include functions.responsive(desktop) {
-                width: 50vw;
-            }
-        }
-    }    
+			@include functions.responsive(desktop) {
+				width: 45%;
+			}
+		}
+	}
+
+	// slick-slider overrides
+	.slick-slider {
+		.slick-slide {
+			width: 70vw;
+
+			@include functions.responsive(desktop) {
+				width: 50vw;
+			}
+		}
+	}
 }
