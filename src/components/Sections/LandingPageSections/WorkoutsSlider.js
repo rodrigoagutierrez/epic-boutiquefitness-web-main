@@ -123,7 +123,7 @@ export default function WorkoutsSlider() {
 				</div>
 				<div className="trainersSlide">
 					<WorkoutsImages
-						pic="yoga1"
+						pic="yoga"
 						text="Yoga"
 						workouts={["yoga"]}
 						slogan={
