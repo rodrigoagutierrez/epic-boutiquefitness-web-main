@@ -17,7 +17,7 @@ import Video from "../Video/Video";
 // video imports
 import Bootcamp from "../../videos/bootcamp.mp4";
 import Epic45 from "../../videos/epic45.mp4";
-import Crossfit from "../../videos/crossfit.mp4";
+import Wod from "../../videos/wod.mp4";
 import Yoga from "../../videos/yoga.mp4";
 import { useTranslation } from "react-i18next";
 
@@ -52,16 +52,16 @@ export default function WorkoutContent({ section, children }) {
 			],
 			bg: <Video src={Epic45} className="workoutBg" />,
 		},
-		crossfit: {
+		wod: {
 			duration: 60,
 			energy: 600,
-			title: "Crossfit",
+			title: "Wod",
 			text: [
 				t(
 					"Each session you will work with weights to suit your level, designed to mould your body and break barriers. It's an experience that will challenge, inspire, and push you to exertion that you never thought was possible."
 				),
 			],
-			bg: <Video src={Crossfit} className="workoutBg" />,
+			bg: <Video src={Wod} className="workoutBg" />,
 		},
 		yoga: {
 			duration: 60,
@@ -83,8 +83,8 @@ export default function WorkoutContent({ section, children }) {
 			],
 			bg: (
 				<StaticImage
-					src="../../images/workouts/crossfit.jpg"
-					alt="A crossfit workout"
+					src="../../images/workouts/wod.jpg"
+					alt="A wod workout"
 					className="workoutBg"
 				/>
 			),

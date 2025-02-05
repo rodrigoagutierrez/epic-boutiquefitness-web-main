@@ -73,14 +73,6 @@ export default function TrainersSlider() {
 	return (
 		<div id="trainersSlider" ref={containerRef}>
 			<Slider {...sliderSettings} className="stripeBg" ref={sliderRef}>
-				{/* <div className="trainersSlide">
-					<TrainerImageAndText
-						pic="javi"
-						text="Javi"
-						workouts={["bootcamp", "epic45", "crossfit", "yoga"]}
-						slogan={t("get your squats low and set your bar high")}
-					/>
-				</div> */}
 				<div className="trainersSlide">
 					<TrainerImageAndText
 						pic="nelson"
@@ -95,6 +87,14 @@ export default function TrainersSlider() {
 						text="Domenico"
 						workouts={["yoga"]}
 						slogan={t("loving the challenge every time I teach")}
+					/>
+				</div>
+				<div className="trainersSlide">
+					<TrainerImageAndText
+						pic="emilio"
+						text="Emilio"
+						workouts={["bootcamp", "epic45", "crossfit", "yoga"]}
+						slogan={t("get your squats low and set your bar high")}
 					/>
 				</div>
 				<div className="trainersSlide">

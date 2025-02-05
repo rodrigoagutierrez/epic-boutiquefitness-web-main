@@ -12,7 +12,7 @@ import "./WorkoutSelector.scss";
 // components imports
 // workout icons
 import BootcampIcon from "../../svg/workouts/bootcamp.svg";
-import CrossfitIcon from "../../svg/workouts/crossfit.svg";
+import WodIcon from "../../svg/workouts/wod.svg";
 import Epic45Icon from "../../svg/workouts/epic45.svg";
 import YogaIcon from "../../svg/workouts/yoga.svg";
 import WorkoutContent from "./WorkoutContent";
@@ -43,11 +43,11 @@ export default function WorkoutSelector() {
 					<BootcampIcon />
 				</button>
 				<button
-					onClick={() => changeWorkout("crossfit")}
-					className={`${activeWorkout === "crossfit" ? "active" : ""}`}
+					onClick={() => changeWorkout("wod")}
+					className={`${activeWorkout === "wod" ? "active" : ""}`}
 				>
-					<div className="blue">Crossfit</div>
-					<CrossfitIcon />
+					<div className="blue">wod</div>
+					<WodIcon />
 				</button>
 				<button
 					onClick={() => changeWorkout("epic45")}

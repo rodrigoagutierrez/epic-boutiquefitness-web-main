@@ -77,7 +77,7 @@ export default function WorkoutsSlider() {
 					<WorkoutsImages
 						pic="bootcamplp"
 						text="Bootcamp"
-						workouts={["crossfit"]}
+						workouts={["wod"]}
 						slogan={
 							<>
 								<strong>{t("Power ")}</strong>
@@ -90,9 +90,9 @@ export default function WorkoutsSlider() {
 				</div>
 				<div className="trainersSlide">
 					<WorkoutsImages
-						pic="crossfit1"
-						text="Crossfit"
-						workouts={["crossfit"]}
+						pic="wod"
+						text="Wod"
+						workouts={["wod"]}
 						slogan={
 							<>
 								<strong>{t("Challenge ")}</strong>

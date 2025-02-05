@@ -13,7 +13,7 @@ import "./TrainerImageAndText.scss";
 // svg imports
 // workout icons
 import BootcampIcon from "../../svg/workouts/bootcamp.svg";
-import CrossfitIcon from "../../svg/workouts/crossfit.svg";
+import WodIcon from "../../svg/workouts/wod.svg";
 import Epic45Icon from "../../svg/workouts/epic45.svg";
 import YogaIcon from "../../svg/workouts/yoga.svg";
 
@@ -27,7 +27,7 @@ export default function TrainerImageAndText({
 	const iconSwitch = (workoutName) => {
 		switch (workoutName.toLowerCase()) {
 			case "crossfit":
-				return <CrossfitIcon key="crossfit" />;
+				return <WodIcon key="wod" />;
 			case "bootcamp":
 				return <BootcampIcon key="bootcamp" />;
 			case "epic45":
