@@ -73,7 +73,7 @@ export default function TrainerImageAndText({
 				// console.log(data);
 
 				return (
-					<div className="trainerImageAndTextComponent">
+					<div className={`trainerImageAndTextComponent  ${pic}`}>
 						<div className={`trainerName boxxy stripes ${textColor}`}>
 							<p>{text}</p>
 						</div>
