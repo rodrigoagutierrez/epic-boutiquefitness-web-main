@@ -10,7 +10,7 @@
 	],
 	"license": "UNLICENSED",
 	"scripts": {
-		"develop": "gatsby develop -H 0.0.0.0",
+		"dev": "gatsby develop -H 0.0.0.0",
 		"serve": "gatsby serve -H 0.0.0.0",
 		"buildDev": "gatsby build --prefix-paths",
 		"build": "gatsby build",

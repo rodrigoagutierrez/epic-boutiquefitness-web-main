@@ -98,7 +98,7 @@ export default function Footer({ footerList }) {
 					</div>
 					<div className="RRSSLogos">
 						<a
-							href="https://www.facebook.com/profile.php?id=100086483572410"
+							href="https://www.facebook.com/profile.php?id=100089666750697"
 							className="blueBg fbLogo"
 						>
 							<FbLogo />
@@ -130,7 +130,7 @@ export default function Footer({ footerList }) {
 			{/* <div className="footerBottom">
 				<div className="RRSSLogos">
 					<a
-						href="https://www.facebook.com/profile.php?id=100086483572410"
+						href="https://www.facebook.com/profile.php?id=100089666750697"
 						className="blueBg"
 					>
 						<FbLogo />

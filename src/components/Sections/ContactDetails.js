@@ -68,7 +68,7 @@ export default function ContactDetails() {
 						</span>
 						<div className="RRSSLogos">
 							<a
-								href="https://www.facebook.com/profile.php?id=100086483572410"
+								href="https://www.facebook.com/profile.php?id=100089666750697"
 								className="blueBg"
 							>
 								<FbLogo />
