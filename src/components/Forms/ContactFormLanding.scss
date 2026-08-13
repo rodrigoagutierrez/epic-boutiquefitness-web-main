@@ -15,13 +15,13 @@
 	input,
 	textarea {
 		box-shadow: none;
-		border: 1px solid var.$black;
+		border: 1px solid rgba(0, 0, 0, 0.2);
 		background-color: var.$white;
-		padding: 0.6rem 0.3rem 0.3rem;
+		padding: 0.75rem 0.9rem;
 		box-sizing: content-box;
 
 	
-		margin-bottom: 0.5rem;
+		margin-bottom: 0.75rem;
 	
 		font-size: inherit;
 		text-transform: none;
@@ -31,6 +31,15 @@
 
 		box-sizing: border-box;
 		width: 100%;
+
+		border-radius: var.$radius-sm;
+
+		transition: border-color var.$fast var.$ease-out-quart;
+	}
+
+	input::placeholder,
+	textarea::placeholder {
+		color: rgba(0, 0, 0, 0.45);
 	}
 
 	.checkbox {
@@ -81,8 +90,9 @@
 	textarea:focus {
 		box-shadow: none;
 		outline: none;
-		background-color: var.$turquoise;
-		color: var.$white;
+		background-color: var.$white;
+		color: var.$black;
+		border-color: var.$black;
 	}
 	
 	input::placeholder,
@@ -113,23 +123,34 @@
 	}
 	
 	.formSubmit button {
-		padding: 0.3rem 0.3rem 0.25rem;
+		padding: 0.9rem 1rem;
 		width: 100%;
 		color: var.$black;
-		border-radius: 0;
+		border-radius: var.$radius-sm;
 		font-size: inherit;
 
-		transition: width var.$medium ease-out, margin-left var.$medium ease-out;
+		background-color: var.$turquoise;
+		background-image: none !important;
+		border: 2px solid var.$turquoise;
+
+		transition: background-color var.$fast var.$ease-out-quart,
+			color var.$fast var.$ease-out-quart,
+			transform var.$fast var.$ease-out-quart;
 	}
 
 	.formSubmit button:hover {
-		width: 104%;
-		margin-left: -2%;
+		background-color: var.$black;
+		border-color: var.$black;
+		color: var.$white;
+		transform: translateY(-2px);
 		-webkit-text-fill-color: var.$white;
 	}
 
 	.formSubmit button:active {
 		color: var.$black;
+		background-color: var.$white;
+		border-color: var.$black;
+		transform: translateY(0);
 		-webkit-text-fill-color:  var.$black;
 	}
 

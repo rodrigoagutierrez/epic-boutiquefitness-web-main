@@ -22,18 +22,20 @@ html {
     margin: 0;
     background: var.$white;
     color: var.$black;
-    font-family: 'Montserrat', sans-serif;
+    font-family: var.$font-body;
     font-weight: 300;
-    line-height: 1.4em;
-    
-    
+    line-height: 1.6em;
+
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
 }
 
 main {
     > div {
-        width: 96%;
-        max-width: 1300px;
-        margin: 6rem auto 12rem auto;
+        width: calc(100% - var.$gutter * 2);
+        max-width: var.$container;
+        margin: var.$section-space auto;
         scroll-margin-top: 130px;
     }
 
@@ -50,10 +52,10 @@ main {
         }
 
         > div {
-            width: 96%;
-            max-width: 1300px;
+            width: calc(100% - var.$gutter * 2);
+            max-width: var.$container;
             
-            padding: 6rem 0 12rem 0;
+            padding: var.$section-space 0;
             margin: 0 auto;
             scroll-margin-top: 130px;
         }
@@ -61,15 +63,16 @@ main {
 }
 
 b, .bold {
-    font-family: 'Montserrat', sans-serif;
+    font-family: var.$font-body;
     font-weight: 800;
 }
 
 .boxxy {
-    font-family: "Gobold", 'Trebuchet MS', Arial, sans-serif;
+    font-family: var.$font-display;
     font-weight: 500;
     text-transform: uppercase;
     line-height: 110%;
+    letter-spacing: 0.01em;
 
     &.outline {
         font-weight: 500;
@@ -79,7 +82,7 @@ b, .bold {
 .outline {
     -webkit-text-fill-color: transparent;
     -webkit-text-stroke-color: var.$white;
-    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-width: 1.5px;
     font-weight: 800;
 
     &.blue {
@@ -98,7 +101,7 @@ b, .bold {
 .outlineLanding {
     -webkit-text-fill-color: transparent;
     -webkit-text-stroke-color: var.$black;
-    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-width: 1.5px;
     font-weight: 800;
 
     &.blue {
@@ -120,18 +123,19 @@ b, .bold {
 
 
 h1, .h1 {
-    font-size: 4rem;
-    line-height: 4.4rem;
+    font-size: var.$h1-size;
+    line-height: var.$h1-line;
 }
 
 h2, .h2 {
-    font-size: 2rem;
-    line-height: 2.2rem;
+    font-size: var.$h2-size;
+    line-height: var.$h2-line;
 }
 
 a {
     text-decoration: none;
     color: inherit;
+    transition: color var.$fast var.$ease-out-quart;
 }
 
 img {
@@ -144,6 +148,47 @@ button {
     font-family: inherit;
     text-transform: inherit;
     background: none;
+}
+
+// Editorial kicker label (short uppercase line above headings)
+.kicker {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+
+    margin: 0 0 1.25rem;
+    font-size: var.$kicker-size;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: var.$kicker-track;
+
+    &::before {
+        content: "";
+        display: block;
+        width: 2rem;
+        height: 2px;
+        background-color: currentColor;
+        opacity: 0.7;
+    }
+
+    &.center {
+        justify-content: center;
+
+        &::after {
+            content: "";
+            display: block;
+            width: 2rem;
+            height: 2px;
+            background-color: currentColor;
+            opacity: 0.7;
+        }
+    }
+}
+
+// Accessible focus states
+:focus-visible {
+    outline: 2px solid var.$turquoise;
+    outline-offset: 3px;
 }
 
 .whiteBg {
@@ -173,6 +218,28 @@ button {
 // Disable animations on window resize
 .resize-animation-stopper * {
     transition: none !important;
+}
+
+// Reveal-on-scroll micro-interaction (enabled only when JS adds .reveal-ready)
+body.reveal-ready [data-reveal] {
+    opacity: 0;
+    transform: translateY(28px);
+    transition: opacity 0.7s var.$ease-out-expo,
+        transform 0.7s var.$ease-out-expo;
+    will-change: opacity, transform;
+}
+
+body.reveal-ready [data-reveal].reveal-in {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+    body.reveal-ready [data-reveal] {
+        opacity: 1;
+        transform: none;
+        transition: none;
+    }
 }
 
 

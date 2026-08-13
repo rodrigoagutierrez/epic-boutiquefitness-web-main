@@ -31,29 +31,47 @@ export default function Video({
 		}
 	}
 
+	// Keep the source in sync with the current orientation (portrait/landscape)
 	React.useEffect(() => {
-		if (srcV) {
-			window.addEventListener("resize", () => {
-				window.innerHeight > window.innerWidth
-					? setVideoSrc(srcV)
-					: setVideoSrc(src);
-			});
-		}
-	});
+		const pickSource = () =>
+			srcV
+				? window.innerHeight > window.innerWidth
+					? srcV
+					: src
+				: src;
 
-	React.useEffect(() => {
-		if (srcV) {
-			window.innerHeight > window.innerWidth
-				? setVideoSrc(srcV)
-				: setVideoSrc(src);
-		} else {
-			setVideoSrc(src);
-		}
+		setVideoSrc(pickSource());
+
+		if (!srcV) return;
+
+		const handleResize = () => setVideoSrc(pickSource());
+		window.addEventListener("resize", handleResize);
+		return () => window.removeEventListener("resize", handleResize);
 	}, [src, srcV]);
 
 	// Show the loader upon source change
 	React.useEffect(() => {
 		setLoaded(false);
+	}, [videoSrc]);
+
+	// Defer playback until the video scrolls into view
+	React.useEffect(() => {
+		const video = videoRef.current;
+		if (!video) return;
+
+		const observer = new IntersectionObserver(
+			(entries) => {
+				if (entries[0].isIntersecting) {
+					video.play().catch(() => {});
+				} else {
+					video.pause();
+				}
+			},
+			{ rootMargin: "100px" }
+		);
+
+		observer.observe(video);
+		return () => observer.disconnect();
 	}, [videoSrc]);
 
 	return (
@@ -66,10 +84,10 @@ export default function Video({
 		>
 			<Loader loaded={loaded} />
 			<video
-				autoPlay
 				loop
 				muted
 				playsInline
+				preload="metadata"
 				ref={videoRef}
 				src={videoSrc}
 				type={type}

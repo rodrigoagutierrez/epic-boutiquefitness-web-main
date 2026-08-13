@@ -24,10 +24,9 @@ import PatternWhapp from "../svg/patterns/patternWhapp.svg";
 import LandingLayout from "../components/Layout/LandingLayout";
 import Seo from "../components/Seo/Seo";
 import LandingHeader from "../components/Sections/LandingPageSections/LandingHeader";
-import CommunitySlider from "../components/Sections/CommunitySlider";
+import LazyLoad from "../components/LazyLoad";
 import ContactFormLanding from "../components/Forms/ContactFormLanding";
 import LandingHero from "../components/Sections/LandingPageSections/LandingHero";
-import WorkoutsSlider from "../components/Sections/LandingPageSections/WorkoutsSlider";
 
 // page
 export default function LandingPage() {
@@ -57,11 +56,13 @@ export default function LandingPage() {
 			<LandingHero />
 			{/* Contact section */}
 			<div className="section invert">
-				<div id="LandingContact">
+				<div id="LandingContact" data-reveal>
 					<div className="LandingContactTitle">
-						<h1 className="boxxy">
-							<Trans>Quiero mi clase gratis</Trans>
-						</h1>
+						<div>
+							<h1 className="boxxy">
+								<Trans>Quiero mi clase gratis</Trans>
+							</h1>
+						</div>
 					</div>
 
 					<ContactFormLanding />
@@ -70,12 +71,12 @@ export default function LandingPage() {
 
 			{/* Workout section */}
 
-			<div id="Landingclasses">
-				<WorkoutsSlider />
+			<div id="Landingclasses" data-reveal>
+				<LazyLoad importFn={() => import("../components/Sections/LandingPageSections/WorkoutsSlider")} />
 			</div>
 
 			{/* About section */}
-			<div id="Landingabout" className="section invert">
+			<div id="Landingabout" className="section invert" data-reveal>
 				<h1 className="boxxy">
 					<Trans>Por qué EPIC</Trans>
 				</h1>
@@ -94,13 +95,10 @@ export default function LandingPage() {
 				{/* Community section */}
 				<div id="LandingCommunity" className="section invert">
 					<div>
-						<span className="titleExtras bold">
-							<Trans>we are not just a studio, we are a</Trans>
-						</span>
 						<h1 className="boxxy outline">
 							<Trans>community</Trans>
 						</h1>
-						<CommunitySlider />
+						<LazyLoad importFn={() => import("../components/Sections/CommunitySlider")} />
 					</div>
 				</div>
 

@@ -1,0 +1,26 @@
+diff --git a/node_modules/svg-react-loader/lib/component/from-object.js b/node_modules/svg-react-loader/lib/component/from-object.js
+index de3b4a7..655dca3 100644
+--- a/node_modules/svg-react-loader/lib/component/from-object.js
++++ b/node_modules/svg-react-loader/lib/component/from-object.js
+@@ -32,7 +32,7 @@ function fromObject (obj, isRoot) {
+         result += ',' + JSON.stringify(props);
+     }
+     else if (isRoot) {
+-        result += ',props';
++        result += ',Object.assign({}, ' + JSON.stringify(props) + ', props)';
+     }
+     else {
+         result += ',null';
+diff --git a/node_modules/svg-react-loader/lib/component/stringify.js b/node_modules/svg-react-loader/lib/component/stringify.js
+index 861dcbc..ac95d9d 100644
+--- a/node_modules/svg-react-loader/lib/component/stringify.js
++++ b/node_modules/svg-react-loader/lib/component/stringify.js
+@@ -13,8 +13,6 @@ module.exports = R.curry(function stringify (opts, tree) {
+     var postamble = [
+         '}',
+         '',
+-        displayName + '.defaultProps = ' + JSON.stringify(tree.props || {}) + ';',
+-        '',
+         'module.exports = ' + displayName + ';',
+         '',
+         displayName + '.default = ' + displayName + ';',

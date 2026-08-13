@@ -70,19 +70,19 @@ export default function WorkoutsImages({
 				return (
 					<div className="workoutComponent">
 						
-						<div className="imageTextContainer">
-							<div className="workoutsOverlay black"></div>
-							<GatsbyImage
-								className="imageBg"
-								image={imgArray[0]?.node?.childImageSharp?.gatsbyImageData}
-								alt=""
-								objectFit="cover"
-							/>
-							<div className={`trainerName boxxy ${textColor}`}>
-								<p>{text}</p>
-							</div>
+<div className={`imageTextContainer ${textColor}`}>
+						<div className="workoutsOverlay black"></div>
+						<GatsbyImage
+							className="imageBg"
+							image={imgArray[0]?.node?.childImageSharp?.gatsbyImageData}
+							alt=""
+							objectFit="cover"
+						/>
+						<div className={`trainerName boxxy ${textColor}`}>
+							<p>{text}</p>
 						</div>
 						<div className="trainerSlogan bold white">{slogan}</div>
+					</div>
 						{/* <div className="workoutsList">{workoutList}</div> */}
 					</div>
 				);

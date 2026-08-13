@@ -34,11 +34,10 @@ import Layout from "../components/Layout/Layout.js";
 import Seo from "../components/Seo/Seo.js";
 // import ImageAndText from "../components/ImageAndText/ImageAndText";
 // import IconSurroundText from "../components/Values/IconSurroundText";
-import CommunitySlider from "../components/Sections/CommunitySlider";
+import LazyLoad from "../components/LazyLoad";
 import ContactForm from "../components/Forms/ContactForm";
 import ContactDetails from "../components/Sections/ContactDetails";
 import DownloadApp from "../components/Sections/DownloadApp";
-import TrainersSlider from "../components/Sections/TrainersSlider";
 import FirstTimer from "../components/Sections/FirstTimer";
 import WorkoutSelector from "../components/Sections/WorkoutSelector";
 import Video from "../components/Video/Video";
@@ -418,7 +417,7 @@ export default function IndexPage() {
 					</span>
 				</div>
 
-				<TrainersSlider />
+				<LazyLoad importFn={() => import("../components/Sections/TrainersSlider")} />
 			</div>
 
 			{separator}
@@ -432,7 +431,7 @@ export default function IndexPage() {
 					<h1 className="boxxy outline">
 						<Trans>community</Trans>
 					</h1>
-					<CommunitySlider />
+					<LazyLoad importFn={() => import("../components/Sections/CommunitySlider")} />
 				</div>
 			</div>
 

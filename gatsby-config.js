@@ -44,7 +44,7 @@ module.exports = {
 			resolve: `gatsby-plugin-sharp`,
 			options: {
 				defaults: {
-					formats: [`auto`],
+					formats: [`auto`, `webp`, `avif`],
 					placeholder: `blurred`,
 					quality: 75,
 				},
@@ -90,21 +90,21 @@ module.exports = {
 			},
 		},
 
-		// this (optional) plugin enables Progressive Web App + Offline functionality
-		// To learn more, visit: https://gatsby.dev/offline
-		// {
-		// 	resolve: `gatsby-plugin-offline`,
-		// 	options: {
-		// 	  workboxConfig: {
-		// 		runtimeCaching: [
-		// 		  {
-		// 			urlPattern: /.*\.mp4/,
-		// 			handler: `NetworkOnly`,
-		// 		  },
-		// 		],
-		// 	  },
-		// 	},
-		// },
+		// Progressive Web App + Offline functionality (Gatsby 5 compatible)
+		// (debe ir despues de gatsby-plugin-manifest)
+		{
+			resolve: `gatsby-plugin-offline`,
+			options: {
+				workboxConfig: {
+					runtimeCaching: [
+						{
+							urlPattern: /.*\.mp4/,
+							handler: `NetworkOnly`,
+						},
+					],
+				},
+			},
+		},
 
 		// Multilingual support
 		{
@@ -119,7 +119,12 @@ module.exports = {
 			options: {
 				localeJsonSourceName: `locale`, // name given to `gatsby-source-filesystem` plugin.
 				languages: [`en`, `es`],
-				defaultLanguage: `en`,
+				defaultLanguage: `es`,
+				// Redirigir por idioma detectado provoca `return null` en el primer
+				// render del cliente (SSR vs cliente) -> errores de hidratacion
+				// React #418/#423 en el build de produccion. Con `false` las
+				// rutas sin prefijo renderizan el idioma por defecto (es).
+				redirect: false,
 				// if you are using Helmet, you must include siteUrl, and make sure you add http:https
 				siteUrl: `https://www.epicboutiquefitness.com`,
 				// you can pass any i18next options

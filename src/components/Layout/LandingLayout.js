@@ -3,10 +3,14 @@ import * as React from "react";
 
 // plugin imports
 import { useTranslation } from "gatsby-plugin-react-i18next";
+import { useLocation } from "@gatsbyjs/reach-router";
 
 // style imports
 import "./LandingLayout.scss";
 import "../../styles/landing_styles.scss";
+
+// hooks
+import { useRevealOnScroll } from "../../hooks/useRevealOnScroll";
 
 // components imports
 import HeaderLanding from "../Sections/LandingPageSections/LandingHeader";
@@ -19,6 +23,9 @@ import Footer from "./Footer";
 
 // component
 export default function LandingLayout({ children }) {
+	const location = useLocation();
+	useRevealOnScroll([location?.pathname]);
+
 	// Disable animations on window resize
 	React.useEffect(() => {
 		if (window) {

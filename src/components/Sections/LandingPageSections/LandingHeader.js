@@ -9,14 +9,17 @@ import "../../../styles/main.scss";
 import "./LandingHeader.scss";
 
 import Logo from "../../../svg/logo/logoTag.svg";
+import BlackArrow from "../../../svg/blackArrow.svg";
 
 const HeaderLanding = () => (
   <header >
     <div className="topHeader">
-      <Link to="/">
-        <Logo className="landingNavLogo" />
-      </Link>
+      <BlackArrow />
+      <div></div>
     </div>
+    <Link to="/">
+      <Logo className="landingNavLogo" />
+    </Link>
   </header>
 );
 
